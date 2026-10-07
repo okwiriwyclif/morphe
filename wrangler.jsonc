@@ -1,0 +1,30 @@
+// Cloudflare Workers config — the whole Nuxt app (pages + /api/contact) runs as one Worker.
+// Deploy: npm run deploy    Local Worker preview: npm run preview
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "morphe",
+  "main": ".output/server/index.mjs",
+  "compatibility_date": "2025-07-15",
+  // nodejs_compat: Node APIs for Nitro + populates process.env from vars/secrets
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".output/public",
+    "binding": "ASSETS"
+  },
+  "observability": { "enabled": true },
+
+  // Custom domain (uncomment once morphe.co.ke is on Cloudflare):
+  // "routes": [{ "pattern": "morphe.co.ke", "custom_domain": true }, { "pattern": "www.morphe.co.ke", "custom_domain": true }],
+
+  // Non-secret settings. SMTP_PASS is a secret: `npm run secrets` (pushes it from .env) — never put it here.
+  "vars": {
+    "SMTP_HOST": "az1-sr5.supercp.com",
+    "SMTP_PORT": "465",
+    "SMTP_SECURE": "true",
+    "SMTP_USER": "notify@morphe.co.ke",
+    "CONTACT_FROM": "notify@morphe.co.ke",
+    "CONTACT_FROM_NAME": "Morphe Creatives",
+    "CONTACT_TO": "hello@morphe.co.ke",
+    "CONTACT_AUTOREPLY": "true"
+  }
+}

@@ -1,75 +1,50 @@
-# Nuxt Minimal Starter
+# Morphe Creatives
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Nuxt 4 (Options API) site for Morphe Creatives, deployed as a single Cloudflare Worker.
+The `/api/contact` route sends inquiries over SMTP.
 
 ## Setup
 
-Make sure to install dependencies:
-
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+cp .env.example .env   # then fill in SMTP_PASS
 ```
 
-## Development Server
+`.env` holds local secrets and is gitignored. Never commit it.
 
-Start the development server on `http://localhost:3000`:
+## Commands
+
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Nuxt dev server on Node at http://localhost:3000. Reads `.env` and sends mail with nodemailer |
+| `npm run preview` | Builds and runs the real Worker locally with `wrangler dev`. Reads `.env` and sends mail with worker-mailer |
+| `npm run deploy` | Builds and deploys to Cloudflare Workers |
+| `npm run secrets` | Pushes secrets from `.env` (`SMTP_PASS`) to the deployed Worker |
+
+## First deploy
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+npx wrangler login     # once per machine
+npm run deploy         # creates the "morphe" Worker
+npm run secrets        # uploads SMTP_PASS as an encrypted Worker secret
 ```
 
-## Production
+After that, `npm run deploy` is all you need. Run `npm run secrets` again only when the
+password changes.
 
-Build the application for production:
+Non-secret settings (SMTP host and port, sender, recipient, auto-reply) are in the
+`vars` block of [wrangler.jsonc](wrangler.jsonc). To use the morphe.co.ke domain, uncomment
+`routes` there once the domain is on Cloudflare.
 
-```bash
-# npm
-npm run build
+## Contact form
 
-# pnpm
-pnpm build
+- Options and validation are in [shared/contact.js](shared/contact.js), and the form and API both use them. Edit services, follow-up questions, budgets and timelines there.
+- [server/api/contact.post.js](server/api/contact.post.js) validates the inquiry, filters spam (honeypot field, minimum time to fill in, rate limit) and sends two emails:
+  - a notification to `CONTACT_TO`, with Reply-To set to the person who filled in the form
+  - a confirmation to the sender, unless `CONTACT_AUTOREPLY=false`
+- Email templates are in [server/utils/inquiry-email.js](server/utils/inquiry-email.js).
 
-# yarn
-yarn build
+## Brand and generated assets
 
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- `python3 scripts/generate-brand.py design/morphe-logo-source.png public` regenerates the logo variants and icons (needs `pip install pillow numpy potracer`).
+- `node scripts/generate-animated.mjs` regenerates the animated section illustrations.

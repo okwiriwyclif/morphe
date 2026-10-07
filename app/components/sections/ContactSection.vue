@@ -1,20 +1,36 @@
 <template>
   <section id="contact" class="py-20 md:py-32 px-4 sm:px-6">
     <div
-      class="max-w-7xl mx-auto glass rounded-[2rem] md:rounded-[4rem] px-6 py-12 sm:p-12 md:p-24 relative overflow-hidden"
+      class="max-w-7xl mx-auto glass rounded-[2rem] md:rounded-[4rem] px-6 py-12 sm:p-12 lg:p-20 relative overflow-clip"
     >
       <div class="gradient-blur w-80 h-80 bg-brand-magenta -top-20 -right-20" />
+      <div class="gradient-blur w-96 h-96 bg-brand-orange -bottom-40 -left-40 opacity-20" />
 
-      <div class="grid md:grid-cols-2 gap-12 md:gap-16 relative z-10">
-        <div v-reveal>
+      <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 relative z-10">
+        <aside v-reveal class="lg:col-span-2 lg:sticky lg:top-28 self-start">
           <h2 class="text-5xl md:text-7xl font-bold tracking-tighter mb-6 md:mb-8 italic">
             Let's <br />Morph.
           </h2>
-          <p class="text-gray-400 text-lg md:text-xl mb-8 md:mb-12">
-            Whether you need a full digital product or a continuous design
-            subscription, we're ready.
+          <p class="text-gray-400 text-lg md:text-xl mb-10">
+            Whether you need a full digital product, an event that people remember, or a
+            continuous design subscription, tell us where you're headed.
           </p>
-          <div class="space-y-4">
+
+          <ol class="space-y-6 mb-12">
+            <li v-for="(step, index) in steps" :key="step.title" class="flex gap-4">
+              <span
+                class="w-8 h-8 shrink-0 rounded-full border border-white/15 flex items-center justify-center text-xs font-bold text-brand-orange"
+              >
+                {{ index + 1 }}
+              </span>
+              <div>
+                <p class="font-semibold">{{ step.title }}</p>
+                <p class="text-sm text-gray-500">{{ step.text }}</p>
+              </div>
+            </li>
+          </ol>
+
+          <div class="space-y-3">
             <a
               :href="`mailto:${email}`"
               class="block text-xl sm:text-2xl font-bold break-words hover:text-brand-pink transition-colors"
@@ -25,54 +41,10 @@
               {{ locations.join(' / ') }}
             </p>
           </div>
-        </div>
+        </aside>
 
-        <div v-reveal>
-          <form v-if="!submitted" class="space-y-6" @submit.prevent="onSubmit">
-            <div class="group">
-              <input
-                v-model.trim="form.name"
-                type="text"
-                placeholder="Name"
-                aria-label="Name"
-                :class="fieldClass"
-                required
-              />
-            </div>
-            <div class="group">
-              <input
-                v-model.trim="form.email"
-                type="email"
-                placeholder="Email"
-                aria-label="Email"
-                :class="fieldClass"
-                required
-              />
-            </div>
-            <div class="group">
-              <textarea
-                v-model.trim="form.message"
-                placeholder="Tell us about your project or DaaS inquiry"
-                aria-label="Message"
-                rows="3"
-                :class="[fieldClass, 'resize-none']"
-                required
-              />
-            </div>
-            <button
-              v-magnetic
-              type="submit"
-              aria-label="Send message"
-              class="w-20 h-20 rounded-full bg-brand-gradient text-white font-bold flex items-center justify-center hover:scale-110 transition-transform"
-            >
-              <Send />
-            </button>
-          </form>
-
-          <div v-else class="text-center py-20">
-            <h3 class="text-3xl font-bold text-brand-gradient mb-2">Message Received</h3>
-            <p class="text-gray-500">We'll get back to you shortly.</p>
-          </div>
+        <div v-reveal class="lg:col-span-3">
+          <ContactForm :contact-email="email" />
         </div>
       </div>
     </div>
@@ -80,32 +52,18 @@
 </template>
 
 <script>
-import { Send } from 'lucide-vue-next'
-
 export default {
   name: 'ContactSection',
-
-  components: { Send },
 
   data() {
     return {
       email: 'hello@morphe.co.ke',
       locations: ['Nairobi Kenya', 'Atlanta Georgia', 'Remote'],
-      submitted: false,
-      form: {
-        name: '',
-        email: '',
-        message: ''
-      },
-      fieldClass:
-        'w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-white transition-colors text-lg md:text-xl placeholder:text-gray-500'
-    }
-  },
-
-  methods: {
-    onSubmit() {
-      // TODO: send this.form to an API endpoint
-      this.submitted = true
+      steps: [
+        { title: 'We reply within a day', text: 'A real person reads every inquiry.' },
+        { title: 'Discovery call', text: '30 minutes to understand your goals and constraints.' },
+        { title: 'Proposal', text: 'Scope, timeline and a clear quote, usually within a week.' }
+      ]
     }
   }
 }

@@ -7,6 +7,15 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  // Build for Cloudflare Workers (see wrangler.jsonc). `nuxt dev` still runs on Node.
+  nitro: {
+    preset: 'cloudflare_module',
+    cloudflare: {
+      deployConfig: false, // we keep our own wrangler.jsonc
+      nodeCompat: true
+    }
+  },
+
   vite: {
     plugins: [tailwindcss()]
   },

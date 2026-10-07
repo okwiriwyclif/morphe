@@ -128,6 +128,28 @@ h2,
   color: transparent;
 }
 
+/* Element showing only a thin border of its (gradient) background; set padding = border width */
+.gradient-ring {
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box exclude,
+    linear-gradient(#000 0 0);
+}
+
+/* Keep browser autofill on-brand instead of yellow */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: #ffffff;
+  caret-color: #ffffff;
+  box-shadow: 0 0 0 1000px #121215 inset;
+  transition: background-color 9999s ease-out;
+}
+
 .glass {
   background: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(10px);
