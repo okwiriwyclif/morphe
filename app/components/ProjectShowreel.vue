@@ -82,12 +82,12 @@
     </div>
 
     <!-- Progress / navigation -->
-    <div class="absolute left-6 right-6 bottom-6 lg:left-12 lg:right-12 lg:bottom-8 z-20 flex gap-2">
+    <div class="absolute left-6 right-6 bottom-4 sm:bottom-6 lg:left-12 lg:right-12 lg:bottom-8 z-20 flex gap-2">
       <button
         v-for="(project, index) in slides"
         :key="project.slug"
         type="button"
-        class="group/bar flex-1 py-2"
+        class="group/bar flex-1 py-3"
         :aria-label="`Show ${project.name}`"
         :aria-current="index === current"
         @click="goTo(index)"

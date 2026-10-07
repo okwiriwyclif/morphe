@@ -1,8 +1,8 @@
 <template>
-  <section id="capabilities" class="py-32 px-6 bg-[#080808]">
+  <section id="capabilities" class="py-20 md:py-32 px-4 sm:px-6 bg-[#080808]">
     <div class="max-w-7xl mx-auto">
-      <div v-reveal class="mb-20">
-        <h2 class="text-4xl md:text-6xl font-bold mb-4 tracking-tighter">
+      <div v-reveal class="mb-12 md:mb-20 px-2 sm:px-0">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 tracking-tighter">
           OUR CAPABILITIES
         </h2>
         <p class="text-gray-500 tracking-widest uppercase text-xs">
@@ -11,7 +11,7 @@
       </div>
 
       <div
-        class="grid grid-cols-1 md:grid-cols-12 gap-1 px-1 bg-white/5 rounded-3xl overflow-hidden border border-white/5"
+        class="grid grid-cols-1 md:grid-cols-12 gap-1 px-1 bg-white/5 rounded-2xl md:rounded-3xl overflow-hidden border border-white/5"
       >
         <CapabilityCard
           v-for="cap in topCapabilities"
@@ -21,7 +21,7 @@
 
         <!-- Highlighted: Design as a Service -->
         <div
-          class="md:col-span-12 bg-gradient-to-r from-brand-orange/10 via-brand-magenta/15 to-brand-deep/30 p-12 hover:from-brand-orange/20 hover:via-brand-magenta/25 hover:to-brand-deep/40 transition-all group relative overflow-hidden"
+          class="md:col-span-12 bg-gradient-to-r from-brand-orange/10 via-brand-magenta/15 to-brand-deep/30 p-6 sm:p-10 lg:p-12 hover:from-brand-orange/20 hover:via-brand-magenta/25 hover:to-brand-deep/40 transition-all group relative overflow-hidden"
         >
           <img
             :src="daasImage"
@@ -39,9 +39,9 @@
             >
               Subscription Model
             </span>
-            <h3 class="text-4xl md:text-5xl font-bold mb-6">Design as a Service</h3>
+            <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">Design as a Service</h3>
             <div class="grid md:grid-cols-3 gap-8 items-start">
-              <p class="text-gray-300 text-lg leading-relaxed md:col-span-2">
+              <p class="text-gray-300 text-base sm:text-lg leading-relaxed md:col-span-2">
                 Scale your design output without the overhead of a full-time
                 hire. One flat monthly fee. Unlimited design requests. Delivered
                 with boutique precision and agency speed.

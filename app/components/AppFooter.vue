@@ -1,7 +1,7 @@
 <template>
-  <footer class="py-20 px-6 border-t border-white/5">
+  <footer class="py-14 md:py-20 px-6 border-t border-white/5">
     <div
-      class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12"
+      class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12"
     >
       <div class="text-center md:text-left">
         <BrandLogo mark-class="h-12" wordmark-class="h-6" />
@@ -9,12 +9,12 @@
           © {{ year }} Morphe Creatives. All rights reserved.
         </p>
       </div>
-      <div class="flex gap-12 text-xs uppercase tracking-widest text-gray-400">
+      <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 lg:gap-x-12 text-xs uppercase tracking-widest text-gray-400">
         <a
           v-for="social in socials"
           :key="social.label"
           :href="social.href"
-          class="hover:text-white transition-colors"
+          class="py-2 hover:text-white transition-colors"
         >
           {{ social.label }}
         </a>

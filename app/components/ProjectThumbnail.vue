@@ -1,5 +1,5 @@
 <template>
-  <div class="relative overflow-hidden rounded-3xl bg-zinc-900 glass" :class="aspectClass">
+  <div class="relative overflow-hidden rounded-2xl md:rounded-3xl bg-zinc-900 glass" :class="aspectClass">
     <!-- Adaptive backdrop: blurred, enlarged copy of the image itself -->
     <img
       :src="src"
@@ -41,7 +41,7 @@ export default {
     },
     paddingClass: {
       type: String,
-      default: 'p-6 md:p-10'
+      default: 'p-4 sm:p-6 md:p-10'
     }
   }
 }

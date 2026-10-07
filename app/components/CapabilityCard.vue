@@ -1,8 +1,8 @@
 <template>
   <div
-    class="md:col-span-6 bg-[#050505] p-12 hover:bg-zinc-900 transition-colors group"
+    class="md:col-span-6 bg-[#050505] p-6 sm:p-10 lg:p-12 hover:bg-zinc-900 transition-colors group"
   >
-    <div v-if="image" class="overflow-hidden rounded-2xl aspect-video mb-10">
+    <div v-if="image" class="overflow-hidden rounded-xl sm:rounded-2xl aspect-video mb-6 sm:mb-10">
       <img
         :src="image"
         :alt="title"
@@ -11,7 +11,7 @@
       />
     </div>
     <span class="text-xs font-bold mb-4 block" :class="accentClass">{{ number }}</span>
-    <h3 class="text-3xl font-bold mb-6 group-hover:translate-x-2 transition-transform">
+    <h3 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 group-hover:translate-x-2 transition-transform">
       {{ title }}
     </h3>
     <p class="text-gray-500 max-w-sm">

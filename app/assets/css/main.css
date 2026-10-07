@@ -34,11 +34,17 @@
   color: #ffffff;
 }
 
+/* clip (not hidden) stops decorative glows causing sideways scroll without breaking position: sticky, incl. iOS */
+html,
+body {
+  overflow-x: clip;
+}
+
 body {
   font-family: var(--font-sans);
   background-color: var(--bg);
   color: #ffffff;
-  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Custom cursor only on devices with a fine pointer */

@@ -1,8 +1,8 @@
 <template>
-  <section id="ethos" class="py-32 px-6">
-    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 items-center">
+  <section id="ethos" class="py-20 md:py-32 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 md:gap-16 lg:gap-24 items-center">
       <div v-reveal class="relative">
-        <div class="aspect-[4/5] bg-zinc-900 rounded-3xl overflow-hidden glass p-1">
+        <div class="aspect-[4/5] max-h-[70svh] md:max-h-none mx-auto bg-zinc-900 rounded-3xl overflow-hidden glass p-1">
           <img
             :src="image"
             alt="Inside the Morphe studio"
@@ -10,17 +10,17 @@
           />
         </div>
         <div
-          class="absolute -bottom-10 -right-10 glass p-8 rounded-2xl max-w-xs hidden md:block"
+          class="absolute -bottom-10 -right-6 lg:-right-10 glass p-8 rounded-2xl max-w-xs hidden md:block"
         >
           <p class="text-sm italic text-gray-400">"{{ quote }}"</p>
         </div>
       </div>
 
       <div v-reveal>
-        <h2 class="text-5xl font-bold mb-10 tracking-tight">
+        <h2 class="text-4xl sm:text-5xl font-bold mb-8 md:mb-10 tracking-tight">
           Software Led <br />By Design.
         </h2>
-        <div class="space-y-8 text-gray-400 text-lg">
+        <div class="space-y-6 md:space-y-8 text-gray-400 text-base sm:text-lg">
           <p>
             We believe most technology fails because it lacks empathy. At Morphe,
             we reverse the engineering process. We start with the human

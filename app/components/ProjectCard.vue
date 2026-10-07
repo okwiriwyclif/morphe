@@ -1,6 +1,6 @@
 <template>
   <div v-reveal class="group">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
+    <div class="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
       <NuxtLink
         :to="to"
         class="block"
@@ -17,11 +17,11 @@
         >
           {{ category }}
         </p>
-        <h3 class="text-4xl font-bold mb-6">{{ name }}</h3>
-        <p class="text-gray-400 mb-8 text-lg">
+        <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6">{{ name }}</h3>
+        <p class="text-gray-400 mb-6 md:mb-8 text-base sm:text-lg">
           {{ description }}
         </p>
-        <NuxtLink :to="to" class="inline-flex items-center gap-2 font-bold group/link">
+        <NuxtLink :to="to" class="inline-flex items-center gap-2 py-2 font-bold group/link">
           View Case
           <ArrowRight class="group-hover/link:translate-x-2 transition-transform" />
         </NuxtLink>

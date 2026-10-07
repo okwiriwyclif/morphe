@@ -1,35 +1,35 @@
 <template>
   <div>
-    <section class="pt-48 pb-20 px-6 relative">
+    <section class="pt-32 md:pt-48 pb-12 md:pb-20 px-6 relative">
       <div class="gradient-blur w-96 h-96 bg-brand-orange top-20 -left-20" />
       <div class="max-w-7xl mx-auto">
         <p
           v-reveal
-          class="text-brand-orange font-medium tracking-[0.3em] uppercase text-xs mb-8"
+          class="text-brand-orange font-medium tracking-[0.3em] uppercase text-xs mb-6 md:mb-8"
         >
           Portfolio
         </p>
         <h1
           v-reveal
-          class="text-[14vw] md:text-[8vw] font-bold leading-[0.9] tracking-tighter mb-12"
+          class="text-[15vw] md:text-[8vw] font-bold leading-[0.9] tracking-tighter mb-8 md:mb-12"
         >
           ALL <span class="italic font-light text-brand-gradient pr-[0.08em]">WORK</span>
         </h1>
-        <p v-reveal class="max-w-xl text-gray-400 text-lg leading-relaxed">
+        <p v-reveal class="max-w-xl text-gray-400 text-base sm:text-lg leading-relaxed">
           {{ projects.length }} platforms across climate, health, government,
           hospitality and commerce, designed and engineered end to end.
         </p>
       </div>
     </section>
 
-    <section class="pb-32 px-6">
+    <section class="pb-20 md:pb-32 px-6">
       <div class="max-w-7xl mx-auto">
-        <div v-reveal class="flex flex-wrap gap-3 mb-16">
+        <div v-reveal class="flex flex-wrap gap-2 sm:gap-3 mb-10 md:mb-16">
           <button
             v-for="filter in filters"
             :key="filter"
             type="button"
-            class="px-5 py-2 rounded-full border text-xs uppercase tracking-widest transition-colors"
+            class="px-4 sm:px-5 py-2.5 rounded-full border text-[11px] sm:text-xs uppercase tracking-widest transition-colors"
             :class="
               activeFilter === filter
                 ? 'bg-brand-gradient text-white border-transparent'
@@ -41,7 +41,7 @@
           </button>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-x-12 gap-y-20">
+        <div class="grid md:grid-cols-2 gap-x-8 lg:gap-x-12 gap-y-14 md:gap-y-20">
           <ProjectTile
             v-for="project in filteredProjects"
             :key="project.slug"

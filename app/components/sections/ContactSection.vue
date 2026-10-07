@@ -1,23 +1,23 @@
 <template>
-  <section id="contact" class="py-32 px-6">
+  <section id="contact" class="py-20 md:py-32 px-4 sm:px-6">
     <div
-      class="max-w-7xl mx-auto glass rounded-[4rem] p-12 md:p-24 relative overflow-hidden"
+      class="max-w-7xl mx-auto glass rounded-[2rem] md:rounded-[4rem] px-6 py-12 sm:p-12 md:p-24 relative overflow-hidden"
     >
       <div class="gradient-blur w-80 h-80 bg-brand-magenta -top-20 -right-20" />
 
-      <div class="grid md:grid-cols-2 gap-16 relative z-10">
+      <div class="grid md:grid-cols-2 gap-12 md:gap-16 relative z-10">
         <div v-reveal>
-          <h2 class="text-5xl md:text-7xl font-bold tracking-tighter mb-8 italic">
+          <h2 class="text-5xl md:text-7xl font-bold tracking-tighter mb-6 md:mb-8 italic">
             Let's <br />Morph.
           </h2>
-          <p class="text-gray-400 text-xl mb-12">
+          <p class="text-gray-400 text-lg md:text-xl mb-8 md:mb-12">
             Whether you need a full digital product or a continuous design
             subscription, we're ready.
           </p>
           <div class="space-y-4">
             <a
               :href="`mailto:${email}`"
-              class="block text-2xl font-bold hover:text-brand-pink transition-colors"
+              class="block text-xl sm:text-2xl font-bold break-words hover:text-brand-pink transition-colors"
             >
               {{ email }}
             </a>
@@ -98,7 +98,7 @@ export default {
         message: ''
       },
       fieldClass:
-        'w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-white transition-colors text-xl placeholder:text-gray-500'
+        'w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-white transition-colors text-lg md:text-xl placeholder:text-gray-500'
     }
   },
 

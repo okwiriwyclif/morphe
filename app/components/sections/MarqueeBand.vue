@@ -1,8 +1,8 @@
 <template>
-  <div class="py-20 border-y border-white/5 bg-white/[0.02]">
+  <div class="py-10 md:py-20 border-y border-white/5 bg-white/[0.02]">
     <div class="marquee">
       <div
-        class="marquee-content text-6xl md:text-8xl font-bold opacity-10 tracking-tighter uppercase space-x-20 px-10"
+        class="marquee-content text-5xl md:text-8xl font-bold opacity-10 tracking-tighter uppercase space-x-20 px-10"
       >
         <span v-for="n in 2" :key="n" :aria-hidden="n > 1">{{ text }}</span>
       </div>
