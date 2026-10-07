@@ -3,21 +3,11 @@
     <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 items-center">
       <div v-reveal class="relative">
         <div class="aspect-[4/5] bg-zinc-900 rounded-3xl overflow-hidden glass p-1">
-          <div
-            class="w-full h-full bg-gradient-to-br from-zinc-800 to-zinc-950 rounded-[22px] flex items-center justify-center p-12"
-          >
-            <div class="space-y-4 w-full">
-              <div class="h-1 w-2/3 bg-white/20 rounded" />
-              <div class="h-1 w-full bg-white/40 rounded" />
-              <div class="h-1 w-1/2 bg-white/10 rounded" />
-              <div class="pt-8 grid grid-cols-2 gap-4">
-                <div
-                  class="aspect-square bg-indigo-500/20 rounded-xl border border-indigo-500/30"
-                />
-                <div class="aspect-square bg-white/5 rounded-xl border border-white/10" />
-              </div>
-            </div>
-          </div>
+          <img
+            :src="image"
+            alt="Inside the Morphe studio"
+            class="w-full h-full object-cover rounded-[22px]"
+          />
         </div>
         <div
           class="absolute -bottom-10 -right-10 glass p-8 rounded-2xl max-w-xs hidden md:block"
@@ -59,6 +49,7 @@ export default {
 
   data() {
     return {
+      image: '/images/placeholders/ethos-studio.svg',
       quote: 'Technology is the skeleton, design is the soul.',
       stats: [
         { value: '12+', label: 'Industries' },

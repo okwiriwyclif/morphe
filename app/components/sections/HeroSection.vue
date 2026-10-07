@@ -1,5 +1,5 @@
 <template>
-  <section class="min-h-screen flex flex-col justify-center px-6 relative pt-20">
+  <section class="min-h-screen flex flex-col justify-center px-6 relative pt-40 pb-20">
     <div class="gradient-blur w-96 h-96 bg-indigo-600 top-20 -left-20" />
     <div class="gradient-blur w-[500px] h-[500px] bg-purple-900 bottom-0 -right-40" />
 
@@ -35,6 +35,14 @@
           </a>
         </div>
       </div>
+
+      <div v-reveal class="mt-20 overflow-hidden rounded-3xl glass p-1">
+        <img
+          :src="image"
+          alt="Morphe Creatives showreel"
+          class="w-full aspect-[16/7] object-cover rounded-[22px]"
+        />
+      </div>
     </div>
   </section>
 </template>
@@ -45,6 +53,13 @@ import { ArrowDown } from 'lucide-vue-next'
 export default {
   name: 'HeroSection',
 
-  components: { ArrowDown }
+  components: { ArrowDown },
+
+  props: {
+    image: {
+      type: String,
+      default: '/images/placeholders/hero-showreel.svg'
+    }
+  }
 }
 </script>

@@ -3,19 +3,11 @@
     <div class="grid md:grid-cols-2 gap-12 items-center">
       <NuxtLink
         :to="to"
-        class="block overflow-hidden rounded-3xl aspect-[16/10] bg-zinc-900 glass relative"
+        class="block"
         :class="{ 'md:order-2': reversed }"
         :aria-label="`View ${name} case study`"
       >
-        <img
-          :src="imageUrl"
-          :alt="name"
-          class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
-          loading="lazy"
-        />
-        <div
-          class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
-        />
+        <ProjectThumbnail :src="imageUrl" :alt="name" />
       </NuxtLink>
 
       <div :class="{ 'md:order-1': reversed }">

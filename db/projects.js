@@ -1,5 +1,33 @@
 const projects = [
   {
+    name: "Rika",
+    imageUrl: "/images/projects/rika.png",
+    techStack: [
+      "Nuxt.js",
+      "Tailwindcss",
+      "Strapi",
+      "Pinia",
+      "Cloudflare Workers",
+    ],
+    services: [
+      "UI/UX design",
+      "web platform development",
+      "AI health assistant (Kira)",
+      "youth-friendly facility finder",
+      "headless CMS integration",
+    ],
+    role: "Software Developer / UI/UX Designer",
+    link: "rika.go.ke",
+    description:
+      "Rika is an AI-powered platform that revolutionizes how young people in Kenya access government-approved sexual and reproductive health resources, safely and anonymously.",
+    duration: "Ongoing",
+    achievements: [
+      "Launched Kira, an anonymous AI health guide answering questions on puberty, mental health, relationships, contraception, pregnancy and GBV.",
+      "Built age-based learning journeys for 10–14, 15–17 and 18–24 year olds with articles, books and videos managed through Strapi.",
+      "Delivered a youth-friendly facility finder for private, respectful care across Kenya, served from Cloudflare's edge.",
+    ],
+  },
+  {
     name: "Africa Climate Summit 2023",
     imageUrl: "/images/projects/africa-climate-summit.png",
     techStack: [

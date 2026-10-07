@@ -23,6 +23,13 @@
         <div
           class="md:col-span-12 bg-gradient-to-r from-indigo-900/20 to-purple-900/20 p-12 hover:from-indigo-900/30 hover:to-purple-900/30 transition-all group relative overflow-hidden"
         >
+          <img
+            :src="daasImage"
+            alt=""
+            aria-hidden="true"
+            class="absolute inset-0 w-full h-full object-cover opacity-25 group-hover:opacity-35 transition-opacity"
+            loading="lazy"
+          />
           <div class="absolute top-12 right-12 hidden lg:block opacity-20">
             <RefreshCw class="w-32 h-32 animate-spin-slow" />
           </div>
@@ -75,6 +82,7 @@ export default {
           title: 'UI/UX & Branding',
           description:
             'Creating digital languages that speak clearly. From visual identity systems to complex product interfaces.',
+          image: '/images/placeholders/capability-branding.svg',
           accentClass: 'text-indigo-500'
         },
         {
@@ -82,6 +90,7 @@ export default {
           title: 'Development',
           description:
             'Modern tech stacks built for speed and scale. We build the engine that drives your design-led vision.',
+          image: '/images/placeholders/capability-development.svg',
           accentClass: 'text-purple-500'
         }
       ],
@@ -91,6 +100,7 @@ export default {
           title: 'Hybrid Events',
           description:
             'Designing immersive physical and digital spaces where brand stories come to life in real-time.',
+          image: '/images/placeholders/capability-events.svg',
           accentClass: 'text-pink-500'
         },
         {
@@ -98,9 +108,11 @@ export default {
           title: 'Martech Strategy',
           description:
             'Bespoke software automation and campaigns designed to convert data into meaningful customer experiences.',
+          image: '/images/placeholders/capability-martech.svg',
           accentClass: 'text-orange-500'
         }
       ],
+      daasImage: '/images/placeholders/capability-daas.svg',
       daasPerks: ['No hiring headaches', 'Unlimited revisions', 'Pause or cancel anytime']
     }
   }

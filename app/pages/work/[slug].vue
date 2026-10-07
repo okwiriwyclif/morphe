@@ -31,13 +31,12 @@
 
     <section class="px-6 pb-24">
       <div v-reveal class="max-w-7xl mx-auto">
-        <div class="overflow-hidden rounded-[2rem] glass p-1">
-          <img
-            :src="project.imageUrl"
-            :alt="project.name"
-            class="w-full rounded-[1.8rem] object-cover"
-          />
-        </div>
+        <ProjectThumbnail
+          :src="project.imageUrl"
+          :alt="project.name"
+          aspect-class="aspect-[4/3] md:aspect-[16/9]"
+          padding-class="p-6 md:p-16"
+        />
       </div>
     </section>
 
