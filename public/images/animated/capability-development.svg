@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Code being written and deployed">
+  <defs>
+  <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#fed001"/>
+    <stop offset=".3" stop-color="#fe9e15"/>
+    <stop offset=".55" stop-color="#ee34a1"/>
+    <stop offset=".8" stop-color="#a928c7"/>
+    <stop offset="1" stop-color="#4e1594"/>
+  </linearGradient>
+  <radialGradient id="g1">
+    <stop offset="0" stop-color="#a928c7" stop-opacity="0.45"/>
+    <stop offset="1" stop-color="#a928c7" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="g2">
+    <stop offset="0" stop-color="#fe9e15" stop-opacity="0.3"/>
+    <stop offset="1" stop-color="#fe9e15" stop-opacity="0"/>
+  </radialGradient><pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#fff" stroke-opacity=".05"/></pattern></defs>
+  <style>
+    .fb { transform-box: fill-box; transform-origin: center; }
+    .fl { transform-box: fill-box; transform-origin: left center; }
+    .fbt { transform-box: fill-box; transform-origin: center bottom; }
+    
+  @keyframes l0 {
+    0%, 4% { transform: scaleX(0); opacity: 0; }
+    8%, 88% { transform: scaleX(1); opacity: 1; }
+    94%, 100% { transform: scaleX(0); opacity: 0; }
+  }
+  @keyframes l1 {
+    0%, 10% { transform: scaleX(0); opacity: 0; }
+    14%, 88% { transform: scaleX(1); opacity: 1; }
+    94%, 100% { transform: scaleX(0); opacity: 0; }
+  }
+  @keyframes l2 {
+    0%, 16% { transform: scaleX(0); opacity: 0; }
+    20%, 88% { transform: scaleX(1); opacity: 1; }
+    94%, 100% { transform: scaleX(0); opacity: 0; }
+  }
+  @keyframes l3 {
+    0%, 22% { transform: scaleX(0); opacity: 0; }
+    26%, 88% { transform: scaleX(1); opacity: 1; }
+    94%, 100% { transform: scaleX(0); opacity: 0; }
+  }
+  @keyframes l4 {
+    0%, 28% { transform: scaleX(0); opacity: 0; }
+    32%, 88% { transform: scaleX(1); opacity: 1; }
+    94%, 100% { transform: scaleX(0); opacity: 0; }
+  }
+  @keyframes l5 {
+    0%, 34% { transform: scaleX(0); opacity: 0; }
+    38%, 88% { transform: scaleX(1); opacity: 1; }
+    94%, 100% { transform: scaleX(0); opacity: 0; }
+  }
+  @keyframes l6 {
+    0%, 40% { transform: scaleX(0); opacity: 0; }
+    44%, 88% { transform: scaleX(1); opacity: 1; }
+    94%, 100% { transform: scaleX(0); opacity: 0; }
+  }
+  @keyframes l7 {
+    0%, 46% { transform: scaleX(0); opacity: 0; }
+    50%, 88% { transform: scaleX(1); opacity: 1; }
+    94%, 100% { transform: scaleX(0); opacity: 0; }
+  }
+  @keyframes l8 {
+    0%, 52% { transform: scaleX(0); opacity: 0; }
+    56%, 88% { transform: scaleX(1); opacity: 1; }
+    94%, 100% { transform: scaleX(0); opacity: 0; }
+  }
+  @keyframes l9 {
+    0%, 58% { transform: scaleX(0); opacity: 0; }
+    62%, 88% { transform: scaleX(1); opacity: 1; }
+    94%, 100% { transform: scaleX(0); opacity: 0; }
+  }
+  @keyframes l10 {
+    0%, 64% { transform: scaleX(0); opacity: 0; }
+    68%, 88% { transform: scaleX(1); opacity: 1; }
+    94%, 100% { transform: scaleX(0); opacity: 0; }
+  }
+  @keyframes l11 {
+    0%, 70% { transform: scaleX(0); opacity: 0; }
+    74%, 88% { transform: scaleX(1); opacity: 1; }
+    94%, 100% { transform: scaleX(0); opacity: 0; }
+  }
+  @keyframes t0 {
+    0%, 40% { transform: translateY(8px); opacity: 0; }
+    44%, 88% { transform: translateY(0); opacity: 1; }
+    94%, 100% { transform: translateY(8px); opacity: 0; }
+  }
+  @keyframes t1 {
+    0%, 50% { transform: translateY(8px); opacity: 0; }
+    54%, 88% { transform: translateY(0); opacity: 1; }
+    94%, 100% { transform: translateY(8px); opacity: 0; }
+  }
+  @keyframes t2 {
+    0%, 60% { transform: translateY(8px); opacity: 0; }
+    64%, 88% { transform: translateY(0); opacity: 1; }
+    94%, 100% { transform: translateY(8px); opacity: 0; }
+  }
+  @keyframes t3 {
+    0%, 70% { transform: translateY(8px); opacity: 0; }
+    74%, 88% { transform: translateY(0); opacity: 1; }
+    94%, 100% { transform: translateY(8px); opacity: 0; }
+  }
+    @keyframes blink { 50% { opacity: 0; } }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="1200" height="675" fill="#0b0b0e"/>
+
+  <circle cx="1000" cy="160" r="380" fill="url(#g1)"/>
+  <circle cx="160" cy="640" r="320" fill="url(#g2)"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+  
+  <rect x="120" y="70" width="620" height="535" rx="22" fill="#131318" stroke="#fff" stroke-opacity=".08"/>
+  <path d="M120 114H740" stroke="#fff" stroke-opacity=".06"/>
+  <circle cx="146" cy="92" r="6" fill="#fb664c"/>
+  <circle cx="166" cy="92" r="6" fill="#fed001"/>
+  <circle cx="186" cy="92" r="6" fill="#a928c7"/>
+  <rect x="360" y="85" width="140" height="14" rx="7" fill="#fff" fill-opacity=".06"/>
+  <path d="M176 114V605" stroke="#fff" stroke-opacity=".05"/>
+  <text x="154" y="151" fill="#fff" fill-opacity=".18" font-family="Menlo, monospace" font-size="12"> 1</text>
+    <g class="fl" style="animation: l0 9s steps(12) infinite"><rect x="200" y="140" width="220" height="12" rx="6" fill="rgba(255,255,255,.18)"/></g><text x="154" y="185" fill="#fff" fill-opacity=".18" font-family="Menlo, monospace" font-size="12"> 2</text>
+    <g class="fl" style="animation: l1 9s steps(12) infinite"><rect x="200" y="174" width="60" height="12" rx="6" fill="#ee34a1"/><rect x="272" y="174" width="40" height="12" rx="6" fill="rgba(255,255,255,.45)"/><rect x="324" y="174" width="110" height="12" rx="6" fill="#fe9e15"/><rect x="446" y="174" width="30" height="12" rx="6" fill="rgba(255,255,255,.45)"/></g><text x="154" y="219" fill="#fff" fill-opacity=".18" font-family="Menlo, monospace" font-size="12"> 3</text>
+    <g class="fl" style="animation: l2 9s steps(12) infinite"><rect x="232" y="208" width="50" height="12" rx="6" fill="#ee34a1"/><rect x="294" y="208" width="90" height="12" rx="6" fill="rgba(255,255,255,.45)"/><rect x="396" y="208" width="24" height="12" rx="6" fill="rgba(255,255,255,.45)"/><rect x="432" y="208" width="150" height="12" rx="6" fill="#fed001"/></g><text x="154" y="253" fill="#fff" fill-opacity=".18" font-family="Menlo, monospace" font-size="12"> 4</text>
+    <g class="fl" style="animation: l3 9s steps(12) infinite"><rect x="232" y="242" width="70" height="12" rx="6" fill="#ee34a1"/><rect x="314" y="242" width="130" height="12" rx="6" fill="#fe9e15"/><rect x="456" y="242" width="60" height="12" rx="6" fill="rgba(255,255,255,.45)"/></g><text x="154" y="287" fill="#fff" fill-opacity=".18" font-family="Menlo, monospace" font-size="12"> 5</text>
+    <g class="fl" style="animation: l4 9s steps(12) infinite"><rect x="264" y="276" width="80" height="12" rx="6" fill="rgba(255,255,255,.45)"/><rect x="356" y="276" width="90" height="12" rx="6" fill="#fe9e15"/><rect x="458" y="276" width="120" height="12" rx="6" fill="#fed001"/></g><text x="154" y="321" fill="#fff" fill-opacity=".18" font-family="Menlo, monospace" font-size="12"> 6</text>
+    <g class="fl" style="animation: l5 9s steps(12) infinite"><rect x="264" y="310" width="46" height="12" rx="6" fill="#ee34a1"/><rect x="322" y="310" width="150" height="12" rx="6" fill="rgba(255,255,255,.45)"/></g><text x="154" y="355" fill="#fff" fill-opacity=".18" font-family="Menlo, monospace" font-size="12"> 7</text>
+    <g class="fl" style="animation: l6 9s steps(12) infinite"><rect x="232" y="344" width="24" height="12" rx="6" fill="rgba(255,255,255,.45)"/></g><text x="154" y="389" fill="#fff" fill-opacity=".18" font-family="Menlo, monospace" font-size="12"> 8</text>
+    <g class="fl" style="animation: l7 9s steps(12) infinite"><rect x="232" y="378" width="60" height="12" rx="6" fill="#ee34a1"/><rect x="304" y="378" width="100" height="12" rx="6" fill="#fe9e15"/><rect x="416" y="378" width="30" height="12" rx="6" fill="rgba(255,255,255,.45)"/><rect x="458" y="378" width="90" height="12" rx="6" fill="#fed001"/></g><text x="154" y="423" fill="#fff" fill-opacity=".18" font-family="Menlo, monospace" font-size="12"> 9</text>
+    <g class="fl" style="animation: l8 9s steps(12) infinite"><rect x="264" y="412" width="140" height="12" rx="6" fill="#fe9e15"/><rect x="416" y="412" width="70" height="12" rx="6" fill="rgba(255,255,255,.45)"/></g><text x="154" y="457" fill="#fff" fill-opacity=".18" font-family="Menlo, monospace" font-size="12">10</text>
+    <g class="fl" style="animation: l9 9s steps(12) infinite"><rect x="232" y="446" width="24" height="12" rx="6" fill="rgba(255,255,255,.45)"/></g><text x="154" y="491" fill="#fff" fill-opacity=".18" font-family="Menlo, monospace" font-size="12">11</text>
+    <g class="fl" style="animation: l10 9s steps(12) infinite"><rect x="200" y="480" width="24" height="12" rx="6" fill="rgba(255,255,255,.45)"/></g><text x="154" y="525" fill="#fff" fill-opacity=".18" font-family="Menlo, monospace" font-size="12">12</text>
+    <g class="fl" style="animation: l11 9s steps(12) infinite"><rect x="200" y="514" width="80" height="12" rx="6" fill="#ee34a1"/><rect x="292" y="514" width="40" height="12" rx="6" fill="rgba(255,255,255,.45)"/><rect x="344" y="514" width="120" height="12" rx="6" fill="#fe9e15"/></g>
+  <rect x="200" y="546" width="10" height="18" fill="#fe9e15" style="animation: blink 1s steps(1) infinite"/>
+  <g style="animation: float 6s ease-in-out infinite">
+    <text x="830" y="250" fill="url(#brand)" font-family="Space Grotesk, Helvetica, Arial, sans-serif" font-size="150" font-weight="700" letter-spacing="-6">&lt;/&gt;</text>
+  </g>
+  
+  <rect x="780" y="310" width="320" height="190" rx="22" fill="#131318" stroke="#fff" stroke-opacity=".08"/>
+  <path d="M780 354H1100" stroke="#fff" stroke-opacity=".06"/>
+  <circle cx="806" cy="332" r="6" fill="#fb664c"/>
+  <circle cx="826" cy="332" r="6" fill="#fed001"/>
+  <circle cx="846" cy="332" r="6" fill="#a928c7"/>
+  
+  <text x="812" y="380" fill="rgba(255,255,255,.7)" font-family="Menlo, monospace" font-size="15" style="animation: t0 9s ease-out infinite">$ npm run build</text><text x="812" y="410" fill="#fed001" font-family="Menlo, monospace" font-size="15" style="animation: t1 9s ease-out infinite">✓ compiled in 2.1s</text><text x="812" y="440" fill="rgba(255,255,255,.7)" font-family="Menlo, monospace" font-size="15" style="animation: t2 9s ease-out infinite">$ deploy --edge</text><text x="812" y="470" fill="#fed001" font-family="Menlo, monospace" font-size="15" style="animation: t3 9s ease-out infinite">✓ live on 300+ locations</text>
+  <g transform="translate(780 530)">
+    <rect width="190" height="44" rx="22" fill="#fff" fill-opacity=".05" stroke="#fff" stroke-opacity=".1"/>
+    <circle cx="24" cy="22" r="6" fill="#fed001" style="animation: blink 2s ease-in-out infinite"/>
+    <rect x="42" y="17" width="120" height="10" rx="5" fill="#fff" fill-opacity=".45"/>
+  </g>
+</svg>

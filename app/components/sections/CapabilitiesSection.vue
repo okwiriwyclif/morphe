@@ -21,7 +21,7 @@
 
         <!-- Highlighted: Design as a Service -->
         <div
-          class="md:col-span-12 bg-gradient-to-r from-indigo-900/20 to-purple-900/20 p-12 hover:from-indigo-900/30 hover:to-purple-900/30 transition-all group relative overflow-hidden"
+          class="md:col-span-12 bg-gradient-to-r from-brand-orange/10 via-brand-magenta/15 to-brand-deep/30 p-12 hover:from-brand-orange/20 hover:via-brand-magenta/25 hover:to-brand-deep/40 transition-all group relative overflow-hidden"
         >
           <img
             :src="daasImage"
@@ -35,7 +35,7 @@
           </div>
           <div class="relative z-10">
             <span
-              class="bg-indigo-500 text-[10px] text-white font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-4 inline-block"
+              class="bg-brand-gradient text-[10px] text-white font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-4 inline-block"
             >
               Subscription Model
             </span>
@@ -48,7 +48,7 @@
               </p>
               <ul class="space-y-2 text-sm text-gray-400">
                 <li v-for="perk in daasPerks" :key="perk" class="flex items-center gap-2">
-                  <Check class="w-4 h-4 text-indigo-400" />
+                  <Check class="w-4 h-4 text-brand-orange" />
                   {{ perk }}
                 </li>
               </ul>
@@ -82,16 +82,16 @@ export default {
           title: 'UI/UX & Branding',
           description:
             'Creating digital languages that speak clearly. From visual identity systems to complex product interfaces.',
-          image: '/images/placeholders/capability-branding.svg',
-          accentClass: 'text-indigo-500'
+          image: '/images/animated/capability-branding.svg',
+          accentClass: 'text-brand-yellow'
         },
         {
           number: '02',
           title: 'Development',
           description:
             'Modern tech stacks built for speed and scale. We build the engine that drives your design-led vision.',
-          image: '/images/placeholders/capability-development.svg',
-          accentClass: 'text-purple-500'
+          image: '/images/animated/capability-development.svg',
+          accentClass: 'text-brand-orange'
         }
       ],
       bottomCapabilities: [
@@ -100,19 +100,19 @@ export default {
           title: 'Hybrid Events',
           description:
             'Designing immersive physical and digital spaces where brand stories come to life in real-time.',
-          image: '/images/placeholders/capability-events.svg',
-          accentClass: 'text-pink-500'
+          image: '/images/animated/capability-events.svg',
+          accentClass: 'text-brand-pink'
         },
         {
           number: '04',
           title: 'Martech Strategy',
           description:
             'Bespoke software automation and campaigns designed to convert data into meaningful customer experiences.',
-          image: '/images/placeholders/capability-martech.svg',
-          accentClass: 'text-orange-500'
+          image: '/images/animated/capability-martech.svg',
+          accentClass: 'text-brand-magenta'
         }
       ],
-      daasImage: '/images/placeholders/capability-daas.svg',
+      daasImage: '/images/animated/capability-daas.svg',
       daasPerks: ['No hiring headaches', 'Unlimited revisions', 'Pause or cancel anytime']
     }
   }

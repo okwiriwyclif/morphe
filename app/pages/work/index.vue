@@ -1,11 +1,11 @@
 <template>
   <div>
     <section class="pt-48 pb-20 px-6 relative">
-      <div class="gradient-blur w-96 h-96 bg-indigo-600 top-20 -left-20" />
+      <div class="gradient-blur w-96 h-96 bg-brand-orange top-20 -left-20" />
       <div class="max-w-7xl mx-auto">
         <p
           v-reveal
-          class="text-indigo-400 font-medium tracking-[0.3em] uppercase text-xs mb-8"
+          class="text-brand-orange font-medium tracking-[0.3em] uppercase text-xs mb-8"
         >
           Portfolio
         </p>
@@ -13,7 +13,7 @@
           v-reveal
           class="text-[14vw] md:text-[8vw] font-bold leading-[0.9] tracking-tighter mb-12"
         >
-          ALL <span class="italic font-light opacity-50">WORK</span>
+          ALL <span class="italic font-light text-brand-gradient pr-[0.08em]">WORK</span>
         </h1>
         <p v-reveal class="max-w-xl text-gray-400 text-lg leading-relaxed">
           {{ projects.length }} platforms across climate, health, government,
@@ -32,7 +32,7 @@
             class="px-5 py-2 rounded-full border text-xs uppercase tracking-widest transition-colors"
             :class="
               activeFilter === filter
-                ? 'bg-white text-black border-white'
+                ? 'bg-brand-gradient text-white border-transparent'
                 : 'border-white/15 text-gray-400 hover:border-white/40 hover:text-white'
             "
             @click="activeFilter = filter"

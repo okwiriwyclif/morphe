@@ -1,15 +1,11 @@
 <template>
   <div>
     <nav
-      class="fixed top-0 w-full z-50 px-6 py-8 flex justify-between items-center mix-blend-difference"
+      class="fixed top-0 w-full z-50 px-6 flex justify-between items-center transition-all duration-500"
+      :class="scrolled ? 'py-4 bg-black/60 backdrop-blur-xl border-b border-white/5' : 'py-8'"
     >
-      <NuxtLink
-        to="/"
-        v-magnetic
-        class="text-2xl font-bold tracking-tighter flex items-center gap-2"
-      >
-        <span class="w-2 h-2 bg-white rounded-full" />
-        MORPHE
+      <NuxtLink to="/" v-magnetic aria-label="Morphe Creatives home">
+        <BrandLogo mark-class="h-9" wordmark-class="h-4 hidden sm:block" />
       </NuxtLink>
 
       <div class="hidden md:flex gap-12 text-xs font-medium tracking-widest uppercase">
@@ -43,6 +39,7 @@ export default {
   data() {
     return {
       menuOpen: false,
+      scrolled: false,
       links: [
         { label: 'Ethos', href: '/#ethos' },
         { label: 'Capabilities', href: '/#capabilities' },
@@ -55,6 +52,21 @@ export default {
         { label: 'Work', href: '/#work' },
         { label: 'Contact', href: '/#contact' }
       ]
+    }
+  },
+
+  mounted() {
+    this.onScroll()
+    window.addEventListener('scroll', this.onScroll, { passive: true })
+  },
+
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.onScroll)
+  },
+
+  methods: {
+    onScroll() {
+      this.scrolled = window.scrollY > 40
     }
   }
 }

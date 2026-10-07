@@ -1,12 +1,12 @@
 <template>
   <section class="min-h-screen flex flex-col justify-center px-6 relative pt-40 pb-20">
-    <div class="gradient-blur w-96 h-96 bg-indigo-600 top-20 -left-20" />
-    <div class="gradient-blur w-[500px] h-[500px] bg-purple-900 bottom-0 -right-40" />
+    <div class="gradient-blur w-96 h-96 bg-brand-orange top-20 -left-20" />
+    <div class="gradient-blur w-[500px] h-[500px] bg-brand-deep bottom-0 -right-40" />
 
     <div class="max-w-7xl mx-auto w-full">
       <p
         v-reveal
-        class="text-indigo-400 font-medium tracking-[0.3em] uppercase text-xs mb-8"
+        class="text-brand-orange font-medium tracking-[0.3em] uppercase text-xs mb-8"
       >
         Design-Led Technology Studio
       </p>
@@ -15,7 +15,7 @@
         class="text-[12vw] md:text-[8vw] font-bold leading-[0.9] tracking-tighter mb-12"
       >
         SHAPING <br />
-        <span class="italic font-light opacity-50">DIGITAL</span> <br />
+        <span class="italic font-light text-brand-gradient pr-[0.08em]">DIGITAL</span> <br />
         FLUIDITY.
       </h1>
 
@@ -36,13 +36,7 @@
         </div>
       </div>
 
-      <div v-reveal class="mt-20 overflow-hidden rounded-3xl glass p-1">
-        <img
-          :src="image"
-          alt="Morphe Creatives showreel"
-          class="w-full aspect-[16/7] object-cover rounded-[22px]"
-        />
-      </div>
+      <ProjectShowreel v-reveal class="mt-20" />
     </div>
   </section>
 </template>
@@ -53,13 +47,6 @@ import { ArrowDown } from 'lucide-vue-next'
 export default {
   name: 'HeroSection',
 
-  components: { ArrowDown },
-
-  props: {
-    image: {
-      type: String,
-      default: '/images/placeholders/hero-showreel.svg'
-    }
-  }
+  components: { ArrowDown }
 }
 </script>

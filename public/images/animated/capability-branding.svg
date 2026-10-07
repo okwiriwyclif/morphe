@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Interface and brand system being designed">
+  <defs>
+  <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#fed001"/>
+    <stop offset=".3" stop-color="#fe9e15"/>
+    <stop offset=".55" stop-color="#ee34a1"/>
+    <stop offset=".8" stop-color="#a928c7"/>
+    <stop offset="1" stop-color="#4e1594"/>
+  </linearGradient>
+    <linearGradient id="alt" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#4e1594"/><stop offset=".6" stop-color="#d02eb9"/><stop offset="1" stop-color="#fb664c"/></linearGradient>
+    
+  <radialGradient id="g1">
+    <stop offset="0" stop-color="#ee34a1" stop-opacity="0.35"/>
+    <stop offset="1" stop-color="#ee34a1" stop-opacity="0"/>
+  </radialGradient><pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#fff" stroke-opacity=".05"/></pattern></defs>
+  <style>
+    .fb { transform-box: fill-box; transform-origin: center; }
+    .fl { transform-box: fill-box; transform-origin: left center; }
+    .fbt { transform-box: fill-box; transform-origin: center bottom; }
+    
+    @keyframes swap { 0%,40% { opacity: 0; } 50%,90% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes pop { 0%,70%,100% { transform: scale(1); } 80% { transform: scale(1.25); } }
+    @keyframes card { 0%,5% { transform: translateY(20px); opacity: 0; } 15%,85% { transform: translateY(0); opacity: 1; } 95%,100% { transform: translateY(20px); opacity: 0; } }
+    @keyframes type { 0%,8% { transform: scaleX(0); } 22%,85% { transform: scaleX(1); } 95%,100% { transform: scaleX(0); } }
+    @keyframes dash { to { stroke-dashoffset: -32; } }
+    @keyframes cursor {
+      0% { transform: translate(1080px, 640px); }
+      20%,28% { transform: translate(840px, 190px); }
+      48%,56% { transform: translate(300px, 310px); }
+      76%,84% { transform: translate(870px, 470px); }
+      100% { transform: translate(1080px, 640px); }
+    }
+    @keyframes click {
+      0%,22% { transform: scale(0); opacity: 0; } 24% { transform: scale(.15); opacity: 1; } 30% { transform: scale(1); opacity: 0; }
+      50% { transform: scale(0); opacity: 0; } 52% { transform: scale(.15); opacity: 1; } 58% { transform: scale(1); opacity: 0; }
+      78% { transform: scale(0); opacity: 0; } 80% { transform: scale(.15); opacity: 1; } 86%,100% { transform: scale(1); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="1200" height="675" fill="#0b0b0e"/>
+
+  <circle cx="1050" cy="80" r="420" fill="url(#g1)"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+  
+  <rect x="150" y="70" width="900" height="535" rx="22" fill="#131318" stroke="#fff" stroke-opacity=".08"/>
+  <path d="M150 114H1050" stroke="#fff" stroke-opacity=".06"/>
+  <circle cx="176" cy="92" r="6" fill="#fb664c"/>
+  <circle cx="196" cy="92" r="6" fill="#fed001"/>
+  <circle cx="216" cy="92" r="6" fill="#a928c7"/>
+  <rect x="530" y="85" width="140" height="14" rx="7" fill="#fff" fill-opacity=".06"/>
+  <rect x="190" y="150" width="520" height="210" rx="18" fill="url(#brand)"/>
+  <rect x="190" y="150" width="520" height="210" rx="18" fill="url(#alt)" style="animation: swap 10s ease-in-out infinite"/>
+  <rect x="226" y="196" width="300" height="22" rx="11" fill="#fff" fill-opacity=".95" class="fl" style="animation: type 8s ease-in-out infinite"/>
+  <rect x="226" y="232" width="210" height="22" rx="11" fill="#fff" fill-opacity=".95" class="fl" style="animation: type 8s ease-in-out .3s infinite"/>
+  <rect x="226" y="290" width="120" height="38" rx="19" fill="#0b0b0e"/>
+  <rect x="246" y="305" width="80" height="8" rx="4" fill="#fff" fill-opacity=".8"/>
+  
+    <circle cx="790" cy="190" r="20" fill="#fed001" class="fb" style="animation: pop 4s ease-in-out 0s infinite"/>
+    <circle cx="844" cy="190" r="20" fill="#fe9e15" class="fb" style="animation: pop 4s ease-in-out 0.18s infinite"/>
+    <circle cx="898" cy="190" r="20" fill="#ee34a1" class="fb" style="animation: pop 4s ease-in-out 0.36s infinite"/>
+    <circle cx="952" cy="190" r="20" fill="#a928c7" class="fb" style="animation: pop 4s ease-in-out 0.54s infinite"/>
+    <circle cx="1006" cy="190" r="20" fill="#4e1594" class="fb" style="animation: pop 4s ease-in-out 0.72s infinite"/>
+  <text x="780" y="330" fill="#fff" font-family="Space Grotesk, Helvetica, Arial, sans-serif" font-size="110" font-weight="700" letter-spacing="-4">Aa</text>
+  <rect x="930" y="262" width="80" height="8" rx="4" fill="#fff" fill-opacity=".3"/>
+  <rect x="930" y="282" width="56" height="8" rx="4" fill="#fff" fill-opacity=".15"/>
+  <rect x="930" y="302" width="68" height="8" rx="4" fill="#fff" fill-opacity=".15"/>
+  
+    <g class="fb" style="animation: card 8s ease-in-out 0s infinite">
+      <rect x="190" y="390" width="160" height="170" rx="16" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".08"/>
+      <rect x="206" y="406" width="128" height="72" rx="10" fill="#fe9e15" fill-opacity=".85"/>
+      <rect x="206" y="494" width="96" height="9" rx="4.5" fill="#fff" fill-opacity=".4"/>
+      <rect x="206" y="512" width="120" height="7" rx="3.5" fill="#fff" fill-opacity=".15"/>
+      <rect x="206" y="528" width="70" height="7" rx="3.5" fill="#fff" fill-opacity=".15"/>
+    </g>
+    <g class="fb" style="animation: card 8s ease-in-out 0.25s infinite">
+      <rect x="368" y="390" width="160" height="170" rx="16" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".08"/>
+      <rect x="384" y="406" width="128" height="72" rx="10" fill="#ee34a1" fill-opacity=".85"/>
+      <rect x="384" y="494" width="96" height="9" rx="4.5" fill="#fff" fill-opacity=".4"/>
+      <rect x="384" y="512" width="120" height="7" rx="3.5" fill="#fff" fill-opacity=".15"/>
+      <rect x="384" y="528" width="70" height="7" rx="3.5" fill="#fff" fill-opacity=".15"/>
+    </g>
+    <g class="fb" style="animation: card 8s ease-in-out 0.5s infinite">
+      <rect x="546" y="390" width="160" height="170" rx="16" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".08"/>
+      <rect x="562" y="406" width="128" height="72" rx="10" fill="#a928c7" fill-opacity=".85"/>
+      <rect x="562" y="494" width="96" height="9" rx="4.5" fill="#fff" fill-opacity=".4"/>
+      <rect x="562" y="512" width="120" height="7" rx="3.5" fill="#fff" fill-opacity=".15"/>
+      <rect x="562" y="528" width="70" height="7" rx="3.5" fill="#fff" fill-opacity=".15"/>
+    </g>
+  <rect x="740" y="390" width="270" height="170" rx="16" fill="none" stroke="#fe9e15" stroke-width="2" stroke-dasharray="8 8" style="animation: dash 3s linear infinite"/>
+  <g style="animation: cursor 8s ease-in-out infinite">
+    <circle cx="0" cy="0" r="26" fill="none" stroke="#fff" stroke-width="2" class="fb" style="animation: click 8s ease-out infinite"/>
+    <path d="M0 0L0 30L8 22L14 36L20 33L14 20L25 20Z" fill="#fff" stroke="#0b0b0e" stroke-width="2"/>
+  </g>
+</svg>

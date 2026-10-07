@@ -41,10 +41,10 @@ export default {
       type: String,
       default: ''
     },
-    // Full Tailwind class (e.g. "text-indigo-500") so it is picked up at build time
+    // Full Tailwind class (e.g. "text-brand-orange") so it is picked up at build time
     accentClass: {
       type: String,
-      default: 'text-indigo-500'
+      default: 'text-brand-magenta'
     }
   }
 }

@@ -49,7 +49,7 @@ export default {
 
   data() {
     return {
-      image: '/images/placeholders/ethos-studio.svg',
+      image: '/images/animated/ethos-fluid.svg',
       quote: 'Technology is the skeleton, design is the soul.',
       stats: [
         { value: '12+', label: 'Industries' },

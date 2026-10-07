@@ -1,7 +1,7 @@
 <template>
   <article v-if="project">
     <section class="pt-48 pb-16 px-6 relative">
-      <div class="gradient-blur w-96 h-96 bg-indigo-600 top-20 -left-20" />
+      <div class="gradient-blur w-96 h-96 bg-brand-purple top-20 -left-20" />
       <div class="max-w-7xl mx-auto">
         <NuxtLink
           to="/work"
@@ -82,7 +82,7 @@
                 :key="service"
                 class="glass rounded-2xl p-6 flex items-start gap-3 text-gray-300"
               >
-                <Check class="w-5 h-5 mt-0.5 shrink-0 text-indigo-400" />
+                <Check class="w-5 h-5 mt-0.5 shrink-0 text-brand-orange" />
                 {{ service }}
               </li>
             </ul>

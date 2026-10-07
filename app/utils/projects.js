@@ -1,6 +1,6 @@
 import rawProjects from '~~/db/projects'
 
-const ACCENTS = ['text-indigo-400', 'text-purple-400', 'text-pink-400', 'text-orange-400']
+const ACCENTS = ['text-brand-yellow', 'text-brand-orange', 'text-brand-pink', 'text-brand-magenta']
 
 export const slugify = (value) =>
   value

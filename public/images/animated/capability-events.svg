@@ -1,0 +1,281 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Hybrid event stage with live and remote audiences">
+  <defs>
+  <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#fed001"/>
+    <stop offset=".3" stop-color="#fe9e15"/>
+    <stop offset=".55" stop-color="#ee34a1"/>
+    <stop offset=".8" stop-color="#a928c7"/>
+    <stop offset="1" stop-color="#4e1594"/>
+  </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".16"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <clipPath id="screen"><rect x="330" y="100" width="540" height="260" rx="14"/></clipPath>
+    
+  <radialGradient id="g1">
+    <stop offset="0" stop-color="#d02eb9" stop-opacity="0.5"/>
+    <stop offset="1" stop-color="#d02eb9" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="blobA">
+    <stop offset="0" stop-color="#fed001" stop-opacity="0.9"/>
+    <stop offset="1" stop-color="#fed001" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="blobB">
+    <stop offset="0" stop-color="#ee34a1" stop-opacity="0.9"/>
+    <stop offset="1" stop-color="#ee34a1" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="blobC">
+    <stop offset="0" stop-color="#4e1594" stop-opacity="1"/>
+    <stop offset="1" stop-color="#4e1594" stop-opacity="0"/>
+  </radialGradient></defs>
+  <style>
+    .fb { transform-box: fill-box; transform-origin: center; }
+    .fl { transform-box: fill-box; transform-origin: left center; }
+    .fbt { transform-box: fill-box; transform-origin: center bottom; }
+    
+    @keyframes eq { from { transform: scaleY(.25); } to { transform: scaleY(1.4); } }
+    @keyframes drift1 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(120px, 40px); } }
+    @keyframes drift2 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-140px, -50px); } }
+    @keyframes sweepL { 0%,100% { transform: rotate(-12deg); } 50% { transform: rotate(14deg); } }
+    @keyframes sweepR { 0%,100% { transform: rotate(12deg); } 50% { transform: rotate(-16deg); } }
+    @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+    @keyframes flash { 50% { opacity: .2; } }
+    @keyframes rise { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    @keyframes dash { to { stroke-dashoffset: -28; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="1200" height="675" fill="#0b0b0e"/>
+
+  <circle cx="600" cy="220" r="520" fill="url(#g1)"/>
+  <path d="M600 300L-300 675" stroke="#fff" stroke-opacity=".05"/><path d="M600 300L-150 675" stroke="#fff" stroke-opacity=".05"/><path d="M600 300L0 675" stroke="#fff" stroke-opacity=".05"/><path d="M600 300L150 675" stroke="#fff" stroke-opacity=".05"/><path d="M600 300L300 675" stroke="#fff" stroke-opacity=".05"/><path d="M600 300L450 675" stroke="#fff" stroke-opacity=".05"/><path d="M600 300L600 675" stroke="#fff" stroke-opacity=".05"/><path d="M600 300L750 675" stroke="#fff" stroke-opacity=".05"/><path d="M600 300L900 675" stroke="#fff" stroke-opacity=".05"/><path d="M600 300L1050 675" stroke="#fff" stroke-opacity=".05"/><path d="M600 300L1200 675" stroke="#fff" stroke-opacity=".05"/><path d="M600 300L1350 675" stroke="#fff" stroke-opacity=".05"/><path d="M600 300L1500 675" stroke="#fff" stroke-opacity=".05"/><path d="M0 420H1200" stroke="#fff" stroke-opacity=".04"/><path d="M0 480H1200" stroke="#fff" stroke-opacity=".04"/><path d="M0 560H1200" stroke="#fff" stroke-opacity=".04"/><path d="M0 660H1200" stroke="#fff" stroke-opacity=".04"/>
+  <rect x="320" y="90" width="560" height="280" rx="18" fill="#000" stroke="#fff" stroke-opacity=".15"/>
+  <g clip-path="url(#screen)">
+    <rect x="330" y="100" width="540" height="260" fill="#4e1594"/>
+    <circle cx="420" cy="180" r="220" fill="url(#blobA)" style="animation: drift1 9s ease-in-out infinite"/>
+    <circle cx="760" cy="260" r="240" fill="url(#blobB)" style="animation: drift2 11s ease-in-out infinite"/>
+    <circle cx="600" cy="120" r="200" fill="url(#blobC)" style="animation: drift1 13s ease-in-out infinite reverse"/>
+    
+    <rect x="360" y="300" width="14" height="40" rx="4" fill="#fff" fill-opacity=".7" class="fbt" style="animation: eq 0.8s ease-in-out 0s infinite alternate"/>
+    <rect x="387" y="300" width="14" height="40" rx="4" fill="#fff" fill-opacity=".7" class="fbt" style="animation: eq 0.9700000000000001s ease-in-out -0.2s infinite alternate"/>
+    <rect x="414" y="300" width="14" height="40" rx="4" fill="#fff" fill-opacity=".7" class="fbt" style="animation: eq 1.1400000000000001s ease-in-out -0.4s infinite alternate"/>
+    <rect x="441" y="300" width="14" height="40" rx="4" fill="#fff" fill-opacity=".7" class="fbt" style="animation: eq 1.31s ease-in-out -0.6000000000000001s infinite alternate"/>
+    <rect x="468" y="300" width="14" height="40" rx="4" fill="#fff" fill-opacity=".7" class="fbt" style="animation: eq 1.48s ease-in-out -0.8s infinite alternate"/>
+    <rect x="495" y="300" width="14" height="40" rx="4" fill="#fff" fill-opacity=".7" class="fbt" style="animation: eq 0.8s ease-in-out -1s infinite alternate"/>
+    <rect x="522" y="300" width="14" height="40" rx="4" fill="#fff" fill-opacity=".7" class="fbt" style="animation: eq 0.9700000000000001s ease-in-out -1.2000000000000002s infinite alternate"/>
+    <rect x="549" y="300" width="14" height="40" rx="4" fill="#fff" fill-opacity=".7" class="fbt" style="animation: eq 1.1400000000000001s ease-in-out 0s infinite alternate"/>
+    <rect x="576" y="300" width="14" height="40" rx="4" fill="#fff" fill-opacity=".7" class="fbt" style="animation: eq 1.31s ease-in-out -0.2s infinite alternate"/>
+    <rect x="603" y="300" width="14" height="40" rx="4" fill="#fff" fill-opacity=".7" class="fbt" style="animation: eq 1.48s ease-in-out -0.4s infinite alternate"/>
+    <rect x="630" y="300" width="14" height="40" rx="4" fill="#fff" fill-opacity=".7" class="fbt" style="animation: eq 0.8s ease-in-out -0.6000000000000001s infinite alternate"/>
+    <rect x="657" y="300" width="14" height="40" rx="4" fill="#fff" fill-opacity=".7" class="fbt" style="animation: eq 0.9700000000000001s ease-in-out -0.8s infinite alternate"/>
+    <rect x="684" y="300" width="14" height="40" rx="4" fill="#fff" fill-opacity=".7" class="fbt" style="animation: eq 1.1400000000000001s ease-in-out -1s infinite alternate"/>
+    <rect x="711" y="300" width="14" height="40" rx="4" fill="#fff" fill-opacity=".7" class="fbt" style="animation: eq 1.31s ease-in-out -1.2000000000000002s infinite alternate"/>
+    <rect x="738" y="300" width="14" height="40" rx="4" fill="#fff" fill-opacity=".7" class="fbt" style="animation: eq 1.48s ease-in-out 0s infinite alternate"/>
+    <rect x="765" y="300" width="14" height="40" rx="4" fill="#fff" fill-opacity=".7" class="fbt" style="animation: eq 0.8s ease-in-out -0.2s infinite alternate"/>
+    <rect x="792" y="300" width="14" height="40" rx="4" fill="#fff" fill-opacity=".7" class="fbt" style="animation: eq 0.9700000000000001s ease-in-out -0.4s infinite alternate"/>
+    <rect x="819" y="300" width="14" height="40" rx="4" fill="#fff" fill-opacity=".7" class="fbt" style="animation: eq 1.1400000000000001s ease-in-out -0.6000000000000001s infinite alternate"/>
+  </g>
+  <g transform="translate(350 118)">
+    <rect width="74" height="26" rx="13" fill="#ee34a1"/>
+    <circle cx="16" cy="13" r="5" fill="#fff" style="animation: flash 1.2s steps(1) infinite"/>
+    <text x="28" y="18" fill="#fff" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1">LIVE</text>
+  </g>
+  <polygon points="130,0 190,0 520,520 240,520" fill="url(#beam)" style="transform-origin:160px 0; animation: sweepL 7s ease-in-out infinite"/>
+  <polygon points="1010,0 1070,0 960,520 680,520" fill="url(#beam)" style="transform-origin:1040px 0; animation: sweepR 8s ease-in-out infinite"/>
+  <rect x="300" y="384" width="600" height="16" rx="8" fill="url(#brand)" opacity=".8"/>
+  
+    <g style="animation: rise 6s ease-in-out 0s infinite">
+      <rect x="1010" y="130" width="130" height="74" rx="12" fill="#131318" stroke="#fff" stroke-opacity=".12"/>
+      <circle cx="1075" cy="160" r="14" fill="#fe9e15"/>
+      <rect x="1050" y="182" width="50" height="7" rx="3.5" fill="#fff" fill-opacity=".3"/>
+    </g>
+    <g style="animation: rise 6s ease-in-out -2s infinite">
+      <rect x="1010" y="220" width="130" height="74" rx="12" fill="#131318" stroke="#fff" stroke-opacity=".12"/>
+      <circle cx="1075" cy="250" r="14" fill="#ee34a1"/>
+      <rect x="1050" y="272" width="50" height="7" rx="3.5" fill="#fff" fill-opacity=".3"/>
+    </g>
+    <g style="animation: rise 6s ease-in-out -4s infinite">
+      <rect x="1010" y="310" width="130" height="74" rx="12" fill="#131318" stroke="#fff" stroke-opacity=".12"/>
+      <circle cx="1075" cy="340" r="14" fill="#a928c7"/>
+      <rect x="1050" y="362" width="50" height="7" rx="3.5" fill="#fff" fill-opacity=".3"/>
+    </g>
+  <path d="M1000 300 C 940 300, 920 250, 880 240" fill="none" stroke="#fe9e15" stroke-width="2" stroke-dasharray="6 8" style="animation: dash 2s linear infinite"/>
+  <g style="animation: bob 2s ease-in-out 0s infinite">
+        <circle cx="60" cy="540" r="18" fill="#1d1d24"/>
+        <path d="M28 600Q60 550 92 600Z" fill="#17171d"/>
+        <rect x="70" y="506" width="12" height="20" rx="3" fill="#fed001" fill-opacity=".9" style="animation: flash 3s ease-in-out 0s infinite"/>
+      </g><g style="animation: bob 2.4s ease-in-out -0.3s infinite">
+        <circle cx="132" cy="540" r="18" fill="#1d1d24"/>
+        <path d="M100 600Q132 550 164 600Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.8s ease-in-out -0.6s infinite">
+        <circle cx="204" cy="540" r="18" fill="#1d1d24"/>
+        <path d="M172 600Q204 550 236 600Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2s ease-in-out -0.8999999999999999s infinite">
+        <circle cx="276" cy="540" r="18" fill="#1d1d24"/>
+        <path d="M244 600Q276 550 308 600Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.4s ease-in-out 0s infinite">
+        <circle cx="348" cy="540" r="18" fill="#1d1d24"/>
+        <path d="M316 600Q348 550 380 600Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.8s ease-in-out -0.3s infinite">
+        <circle cx="420" cy="540" r="18" fill="#1d1d24"/>
+        <path d="M388 600Q420 550 452 600Z" fill="#17171d"/>
+        <rect x="430" y="506" width="12" height="20" rx="3" fill="#fed001" fill-opacity=".9" style="animation: flash 3s ease-in-out -2s infinite"/>
+      </g><g style="animation: bob 2s ease-in-out -0.6s infinite">
+        <circle cx="492" cy="540" r="18" fill="#1d1d24"/>
+        <path d="M460 600Q492 550 524 600Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.4s ease-in-out -0.8999999999999999s infinite">
+        <circle cx="564" cy="540" r="18" fill="#1d1d24"/>
+        <path d="M532 600Q564 550 596 600Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.8s ease-in-out 0s infinite">
+        <circle cx="636" cy="540" r="18" fill="#1d1d24"/>
+        <path d="M604 600Q636 550 668 600Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2s ease-in-out -0.3s infinite">
+        <circle cx="708" cy="540" r="18" fill="#1d1d24"/>
+        <path d="M676 600Q708 550 740 600Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.4s ease-in-out -0.6s infinite">
+        <circle cx="780" cy="540" r="18" fill="#1d1d24"/>
+        <path d="M748 600Q780 550 812 600Z" fill="#17171d"/>
+        <rect x="790" y="506" width="12" height="20" rx="3" fill="#fed001" fill-opacity=".9" style="animation: flash 3s ease-in-out -4s infinite"/>
+      </g><g style="animation: bob 2.8s ease-in-out -0.8999999999999999s infinite">
+        <circle cx="852" cy="540" r="18" fill="#1d1d24"/>
+        <path d="M820 600Q852 550 884 600Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2s ease-in-out 0s infinite">
+        <circle cx="924" cy="540" r="18" fill="#1d1d24"/>
+        <path d="M892 600Q924 550 956 600Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.4s ease-in-out -0.3s infinite">
+        <circle cx="996" cy="540" r="18" fill="#1d1d24"/>
+        <path d="M964 600Q996 550 1028 600Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.8s ease-in-out -0.6s infinite">
+        <circle cx="1068" cy="540" r="18" fill="#1d1d24"/>
+        <path d="M1036 600Q1068 550 1100 600Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2s ease-in-out -0.8999999999999999s infinite">
+        <circle cx="1140" cy="540" r="18" fill="#1d1d24"/>
+        <path d="M1108 600Q1140 550 1172 600Z" fill="#17171d"/>
+        <rect x="1150" y="506" width="12" height="20" rx="3" fill="#fed001" fill-opacity=".9" style="animation: flash 3s ease-in-out -6s infinite"/>
+      </g><g style="animation: bob 2.4s ease-in-out 0s infinite">
+        <circle cx="96" cy="588" r="18" fill="#1d1d24"/>
+        <path d="M64 648Q96 598 128 648Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.8s ease-in-out -0.3s infinite">
+        <circle cx="168" cy="588" r="18" fill="#1d1d24"/>
+        <path d="M136 648Q168 598 200 648Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2s ease-in-out -0.6s infinite">
+        <circle cx="240" cy="588" r="18" fill="#1d1d24"/>
+        <path d="M208 648Q240 598 272 648Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.4s ease-in-out -0.8999999999999999s infinite">
+        <circle cx="312" cy="588" r="18" fill="#1d1d24"/>
+        <path d="M280 648Q312 598 344 648Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.8s ease-in-out 0s infinite">
+        <circle cx="384" cy="588" r="18" fill="#1d1d24"/>
+        <path d="M352 648Q384 598 416 648Z" fill="#17171d"/>
+        <rect x="394" y="554" width="12" height="20" rx="3" fill="#fed001" fill-opacity=".9" style="animation: flash 3s ease-in-out -1.6s infinite"/>
+      </g><g style="animation: bob 2s ease-in-out -0.3s infinite">
+        <circle cx="456" cy="588" r="18" fill="#1d1d24"/>
+        <path d="M424 648Q456 598 488 648Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.4s ease-in-out -0.6s infinite">
+        <circle cx="528" cy="588" r="18" fill="#1d1d24"/>
+        <path d="M496 648Q528 598 560 648Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.8s ease-in-out -0.8999999999999999s infinite">
+        <circle cx="600" cy="588" r="18" fill="#1d1d24"/>
+        <path d="M568 648Q600 598 632 648Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2s ease-in-out 0s infinite">
+        <circle cx="672" cy="588" r="18" fill="#1d1d24"/>
+        <path d="M640 648Q672 598 704 648Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.4s ease-in-out -0.3s infinite">
+        <circle cx="744" cy="588" r="18" fill="#1d1d24"/>
+        <path d="M712 648Q744 598 776 648Z" fill="#17171d"/>
+        <rect x="754" y="554" width="12" height="20" rx="3" fill="#fed001" fill-opacity=".9" style="animation: flash 3s ease-in-out -3.6s infinite"/>
+      </g><g style="animation: bob 2.8s ease-in-out -0.6s infinite">
+        <circle cx="816" cy="588" r="18" fill="#1d1d24"/>
+        <path d="M784 648Q816 598 848 648Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2s ease-in-out -0.8999999999999999s infinite">
+        <circle cx="888" cy="588" r="18" fill="#1d1d24"/>
+        <path d="M856 648Q888 598 920 648Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.4s ease-in-out 0s infinite">
+        <circle cx="960" cy="588" r="18" fill="#1d1d24"/>
+        <path d="M928 648Q960 598 992 648Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.8s ease-in-out -0.3s infinite">
+        <circle cx="1032" cy="588" r="18" fill="#1d1d24"/>
+        <path d="M1000 648Q1032 598 1064 648Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2s ease-in-out -0.6s infinite">
+        <circle cx="1104" cy="588" r="18" fill="#1d1d24"/>
+        <path d="M1072 648Q1104 598 1136 648Z" fill="#17171d"/>
+        <rect x="1114" y="554" width="12" height="20" rx="3" fill="#fed001" fill-opacity=".9" style="animation: flash 3s ease-in-out -5.6000000000000005s infinite"/>
+      </g><g style="animation: bob 2.8s ease-in-out 0s infinite">
+        <circle cx="132" cy="636" r="18" fill="#1d1d24"/>
+        <path d="M100 696Q132 646 164 696Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2s ease-in-out -0.3s infinite">
+        <circle cx="204" cy="636" r="18" fill="#1d1d24"/>
+        <path d="M172 696Q204 646 236 696Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.4s ease-in-out -0.6s infinite">
+        <circle cx="276" cy="636" r="18" fill="#1d1d24"/>
+        <path d="M244 696Q276 646 308 696Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.8s ease-in-out -0.8999999999999999s infinite">
+        <circle cx="348" cy="636" r="18" fill="#1d1d24"/>
+        <path d="M316 696Q348 646 380 696Z" fill="#17171d"/>
+        <rect x="358" y="602" width="12" height="20" rx="3" fill="#fed001" fill-opacity=".9" style="animation: flash 3s ease-in-out -1.2000000000000002s infinite"/>
+      </g><g style="animation: bob 2s ease-in-out 0s infinite">
+        <circle cx="420" cy="636" r="18" fill="#1d1d24"/>
+        <path d="M388 696Q420 646 452 696Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.4s ease-in-out -0.3s infinite">
+        <circle cx="492" cy="636" r="18" fill="#1d1d24"/>
+        <path d="M460 696Q492 646 524 696Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.8s ease-in-out -0.6s infinite">
+        <circle cx="564" cy="636" r="18" fill="#1d1d24"/>
+        <path d="M532 696Q564 646 596 696Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2s ease-in-out -0.8999999999999999s infinite">
+        <circle cx="636" cy="636" r="18" fill="#1d1d24"/>
+        <path d="M604 696Q636 646 668 696Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.4s ease-in-out 0s infinite">
+        <circle cx="708" cy="636" r="18" fill="#1d1d24"/>
+        <path d="M676 696Q708 646 740 696Z" fill="#17171d"/>
+        <rect x="718" y="602" width="12" height="20" rx="3" fill="#fed001" fill-opacity=".9" style="animation: flash 3s ease-in-out -3.2s infinite"/>
+      </g><g style="animation: bob 2.8s ease-in-out -0.3s infinite">
+        <circle cx="780" cy="636" r="18" fill="#1d1d24"/>
+        <path d="M748 696Q780 646 812 696Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2s ease-in-out -0.6s infinite">
+        <circle cx="852" cy="636" r="18" fill="#1d1d24"/>
+        <path d="M820 696Q852 646 884 696Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.4s ease-in-out -0.8999999999999999s infinite">
+        <circle cx="924" cy="636" r="18" fill="#1d1d24"/>
+        <path d="M892 696Q924 646 956 696Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2.8s ease-in-out 0s infinite">
+        <circle cx="996" cy="636" r="18" fill="#1d1d24"/>
+        <path d="M964 696Q996 646 1028 696Z" fill="#17171d"/>
+        
+      </g><g style="animation: bob 2s ease-in-out -0.3s infinite">
+        <circle cx="1068" cy="636" r="18" fill="#1d1d24"/>
+        <path d="M1036 696Q1068 646 1100 696Z" fill="#17171d"/>
+        <rect x="1078" y="602" width="12" height="20" rx="3" fill="#fed001" fill-opacity=".9" style="animation: flash 3s ease-in-out -5.2s infinite"/>
+      </g>
+</svg>

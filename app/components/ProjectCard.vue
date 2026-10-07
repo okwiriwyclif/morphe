@@ -64,7 +64,7 @@ export default {
     },
     accentClass: {
       type: String,
-      default: 'text-indigo-400'
+      default: 'text-brand-magenta'
     },
     // Swap image/text columns on desktop
     reversed: {

@@ -3,7 +3,7 @@
     <div
       class="max-w-7xl mx-auto glass rounded-[4rem] p-12 md:p-24 relative overflow-hidden"
     >
-      <div class="gradient-blur w-80 h-80 bg-indigo-600 -top-20 -right-20" />
+      <div class="gradient-blur w-80 h-80 bg-brand-magenta -top-20 -right-20" />
 
       <div class="grid md:grid-cols-2 gap-16 relative z-10">
         <div v-reveal>
@@ -17,7 +17,7 @@
           <div class="space-y-4">
             <a
               :href="`mailto:${email}`"
-              class="block text-2xl font-bold hover:text-indigo-400 transition-colors"
+              class="block text-2xl font-bold hover:text-brand-pink transition-colors"
             >
               {{ email }}
             </a>
@@ -63,14 +63,14 @@
               v-magnetic
               type="submit"
               aria-label="Send message"
-              class="w-20 h-20 rounded-full bg-white text-black font-bold flex items-center justify-center hover:scale-110 transition-transform"
+              class="w-20 h-20 rounded-full bg-brand-gradient text-white font-bold flex items-center justify-center hover:scale-110 transition-transform"
             >
               <Send />
             </button>
           </form>
 
           <div v-else class="text-center py-20">
-            <h3 class="text-3xl font-bold text-indigo-400 mb-2">Message Received</h3>
+            <h3 class="text-3xl font-bold text-brand-gradient mb-2">Message Received</h3>
             <p class="text-gray-500">We'll get back to you shortly.</p>
           </div>
         </div>

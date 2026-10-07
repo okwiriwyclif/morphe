@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" role="img" aria-label="Fluid design shaping a technical skeleton">
+  <defs>
+  <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#fed001"/>
+    <stop offset=".3" stop-color="#fe9e15"/>
+    <stop offset=".55" stop-color="#ee34a1"/>
+    <stop offset=".8" stop-color="#a928c7"/>
+    <stop offset="1" stop-color="#4e1594"/>
+  </linearGradient>
+    <linearGradient id="back" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ee34a1"/><stop offset="1" stop-color="#4e1594"/></linearGradient>
+    <radialGradient id="gloss" cx=".35" cy=".3" r=".6"><stop offset="0" stop-color="#fff" stop-opacity=".45"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    
+  <radialGradient id="g1">
+    <stop offset="0" stop-color="#fe9e15" stop-opacity="0.45"/>
+    <stop offset="1" stop-color="#fe9e15" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="g2">
+    <stop offset="0" stop-color="#4e1594" stop-opacity="0.7"/>
+    <stop offset="1" stop-color="#4e1594" stop-opacity="0"/>
+  </radialGradient><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#fff" stroke-opacity=".05"/></pattern></defs>
+  <style>
+    .fb { transform-box: fill-box; transform-origin: center; }
+    .fl { transform-box: fill-box; transform-origin: left center; }
+    .fbt { transform-box: fill-box; transform-origin: center bottom; }
+    
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes pulse { 0%,100% { opacity: .6; } 50% { opacity: 1; } }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+    @keyframes grow { from { transform: scaleX(.3); } to { transform: scaleX(1.8); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="800" height="1000" fill="#0b0b0e"/>
+
+  <circle cx="120" cy="160" r="420" fill="url(#g1)" style="animation: pulse 9s ease-in-out infinite"/>
+  <circle cx="700" cy="880" r="480" fill="url(#g2)" style="animation: pulse 11s ease-in-out infinite reverse"/>
+  <rect width="800" height="1000" fill="url(#grid)"/>
+  <g fill="none" stroke="#fff" stroke-opacity=".14">
+    <path d="M400 60V940M60 500H740" stroke-dasharray="4 10"/>
+    <circle cx="400" cy="500" r="380" stroke-dasharray="2 12" style="transform-origin:400px 500px; animation: spin 80s linear infinite reverse"/>
+  </g>
+  <g style="transform-origin:400px 500px; animation: spin 50s linear infinite">
+    <circle cx="400" cy="500" r="320" fill="none" stroke="#fff" stroke-opacity=".18" stroke-dasharray="14 18"/>
+    <circle cx="720.0" cy="500.0" r="5" fill="#0b0b0e" stroke="#fff" stroke-opacity=".4" stroke-width="2"/><circle cx="626.3" cy="726.3" r="5" fill="#0b0b0e" stroke="#fff" stroke-opacity=".4" stroke-width="2"/><circle cx="400.0" cy="820.0" r="5" fill="#0b0b0e" stroke="#fff" stroke-opacity=".4" stroke-width="2"/><circle cx="173.7" cy="726.3" r="5" fill="#0b0b0e" stroke="#fff" stroke-opacity=".4" stroke-width="2"/><circle cx="80.0" cy="500.0" r="5" fill="#0b0b0e" stroke="#fff" stroke-opacity=".4" stroke-width="2"/><circle cx="173.7" cy="273.7" r="5" fill="#0b0b0e" stroke="#fff" stroke-opacity=".4" stroke-width="2"/><circle cx="400.0" cy="180.0" r="5" fill="#0b0b0e" stroke="#fff" stroke-opacity=".4" stroke-width="2"/><circle cx="626.3" cy="273.7" r="5" fill="#0b0b0e" stroke="#fff" stroke-opacity=".4" stroke-width="2"/>
+  </g>
+  <path d="M713.1,530.0C709.5,592.2 633.1,662.6 578.2,703.3C523.4,744.1 449.5,783.2 384.2,774.7C318.8,766.2 216.5,712.1 186.2,652.2C155.8,592.4 169.4,478.1 202.0,415.4C234.7,352.6 315.7,290.0 382.0,275.8C448.2,261.5 544.3,287.6 599.5,330.0C654.7,372.4 716.6,467.8 713.1,530.0Z" fill="url(#back)" opacity=".55"><animate attributeName="d" dur="13s" repeatCount="indefinite" calcMode="spline" keyTimes="0.000;0.333;0.667;1.000" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" values="M713.1,530.0C709.5,592.2 633.1,662.6 578.2,703.3C523.4,744.1 449.5,783.2 384.2,774.7C318.8,766.2 216.5,712.1 186.2,652.2C155.8,592.4 169.4,478.1 202.0,415.4C234.7,352.6 315.7,290.0 382.0,275.8C448.2,261.5 544.3,287.6 599.5,330.0C654.7,372.4 716.6,467.8 713.1,530.0Z;M720.9,530.0C726.8,595.7 670.7,710.3 615.0,749.4C559.2,788.5 451.3,783.8 386.5,764.4C321.7,745.0 258.3,692.1 225.9,633.1C193.5,574.1 165.1,466.3 192.0,410.6C218.9,354.8 322.6,307.8 387.2,298.5C451.8,289.3 524.0,316.3 579.6,354.9C635.2,393.5 715.0,464.3 720.9,530.0Z;M674.8,530.0C671.3,598.1 640.4,683.1 592.5,721.3C544.7,759.4 455.7,770.2 387.8,758.7C319.9,747.3 214.7,709.2 185.2,652.7C155.7,596.2 178.3,483.5 210.9,419.7C243.4,355.8 313.4,287.4 380.5,269.5C447.7,251.6 564.5,269.0 613.5,312.4C662.6,355.8 678.3,461.9 674.8,530.0Z;M713.1,530.0C709.5,592.2 633.1,662.6 578.2,703.3C523.4,744.1 449.5,783.2 384.2,774.7C318.8,766.2 216.5,712.1 186.2,652.2C155.8,592.4 169.4,478.1 202.0,415.4C234.7,352.6 315.7,290.0 382.0,275.8C448.2,261.5 544.3,287.6 599.5,330.0C654.7,372.4 716.6,467.8 713.1,530.0Z"/></path>
+  <path d="M586.9,500.0C589.7,556.2 581.6,646.8 543.1,679.4C504.5,711.9 408.8,710.9 355.4,695.2C302.1,679.6 248.5,633.8 222.8,585.3C197.1,536.8 179.6,452.9 201.2,404.3C222.9,355.7 298.8,304.2 352.9,293.8C407.1,283.4 487.0,307.6 526.0,342.0C565.0,376.3 584.1,443.8 586.9,500.0Z" fill="url(#brand)"><animate attributeName="d" dur="10s" repeatCount="indefinite" calcMode="spline" keyTimes="0.000;0.333;0.667;1.000" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" values="M586.9,500.0C589.7,556.2 581.6,646.8 543.1,679.4C504.5,711.9 408.8,710.9 355.4,695.2C302.1,679.6 248.5,633.8 222.8,585.3C197.1,536.8 179.6,452.9 201.2,404.3C222.9,355.7 298.8,304.2 352.9,293.8C407.1,283.4 487.0,307.6 526.0,342.0C565.0,376.3 584.1,443.8 586.9,500.0Z;M621.6,500.0C624.1,554.7 583.1,639.0 538.3,673.4C493.5,707.8 408.7,719.8 352.8,706.7C297.0,693.6 227.7,644.9 203.1,594.8C178.5,544.7 180.7,458.5 205.1,406.2C229.6,353.9 297.0,291.2 350.0,281.0C403.1,270.8 478.2,308.6 523.5,345.1C568.8,381.6 619.2,445.3 621.6,500.0Z;M604.2,500.0C603.2,558.5 579.1,636.1 536.9,671.7C494.8,707.3 402.5,728.6 351.2,713.7C300.0,698.7 254.0,633.6 229.4,582.2C204.7,530.8 182.4,452.8 203.1,405.2C223.8,357.6 296.9,310.8 353.6,296.7C410.3,282.6 501.3,286.7 543.1,320.6C584.9,354.4 605.2,441.5 604.2,500.0Z;M586.9,500.0C589.7,556.2 581.6,646.8 543.1,679.4C504.5,711.9 408.8,710.9 355.4,695.2C302.1,679.6 248.5,633.8 222.8,585.3C197.1,536.8 179.6,452.9 201.2,404.3C222.9,355.7 298.8,304.2 352.9,293.8C407.1,283.4 487.0,307.6 526.0,342.0C565.0,376.3 584.1,443.8 586.9,500.0Z"/></path>
+  <path d="M586.9,500.0C589.7,556.2 581.6,646.8 543.1,679.4C504.5,711.9 408.8,710.9 355.4,695.2C302.1,679.6 248.5,633.8 222.8,585.3C197.1,536.8 179.6,452.9 201.2,404.3C222.9,355.7 298.8,304.2 352.9,293.8C407.1,283.4 487.0,307.6 526.0,342.0C565.0,376.3 584.1,443.8 586.9,500.0Z" fill="url(#gloss)"><animate attributeName="d" dur="10s" repeatCount="indefinite" calcMode="spline" keyTimes="0.000;0.333;0.667;1.000" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" values="M586.9,500.0C589.7,556.2 581.6,646.8 543.1,679.4C504.5,711.9 408.8,710.9 355.4,695.2C302.1,679.6 248.5,633.8 222.8,585.3C197.1,536.8 179.6,452.9 201.2,404.3C222.9,355.7 298.8,304.2 352.9,293.8C407.1,283.4 487.0,307.6 526.0,342.0C565.0,376.3 584.1,443.8 586.9,500.0Z;M621.6,500.0C624.1,554.7 583.1,639.0 538.3,673.4C493.5,707.8 408.7,719.8 352.8,706.7C297.0,693.6 227.7,644.9 203.1,594.8C178.5,544.7 180.7,458.5 205.1,406.2C229.6,353.9 297.0,291.2 350.0,281.0C403.1,270.8 478.2,308.6 523.5,345.1C568.8,381.6 619.2,445.3 621.6,500.0Z;M604.2,500.0C603.2,558.5 579.1,636.1 536.9,671.7C494.8,707.3 402.5,728.6 351.2,713.7C300.0,698.7 254.0,633.6 229.4,582.2C204.7,530.8 182.4,452.8 203.1,405.2C223.8,357.6 296.9,310.8 353.6,296.7C410.3,282.6 501.3,286.7 543.1,320.6C584.9,354.4 605.2,441.5 604.2,500.0Z;M586.9,500.0C589.7,556.2 581.6,646.8 543.1,679.4C504.5,711.9 408.8,710.9 355.4,695.2C302.1,679.6 248.5,633.8 222.8,585.3C197.1,536.8 179.6,452.9 201.2,404.3C222.9,355.7 298.8,304.2 352.9,293.8C407.1,283.4 487.0,307.6 526.0,342.0C565.0,376.3 584.1,443.8 586.9,500.0Z"/></path>
+  
+    <g style="transform-origin:400px 500px; animation: spin 14s linear 0s infinite ">
+      <circle cx="700" cy="500" r="9" fill="#fed001"/>
+    </g>
+  
+    <g style="transform-origin:400px 500px; animation: spin 20s linear -6s infinite reverse">
+      <circle cx="650" cy="500" r="6" fill="#ee34a1"/>
+    </g>
+  
+    <g style="transform-origin:400px 500px; animation: spin 26s linear -12s infinite ">
+      <circle cx="760" cy="500" r="7" fill="#a928c7"/>
+    </g>
+  <g transform="translate(70 820)"><g style="animation: float 6s ease-in-out infinite">
+    <rect width="250" height="110" rx="18" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".1"/>
+    <rect x="22" y="26" width="140" height="10" rx="5" fill="#fff" fill-opacity=".35"/>
+    <rect x="22" y="48" width="200" height="8" rx="4" fill="#fff" fill-opacity=".15"/>
+    <rect x="22" y="66" width="170" height="8" rx="4" fill="#fff" fill-opacity=".15"/>
+    <rect x="22" y="84" width="90" height="8" rx="4" fill="#fe9e15" class="fl" style="animation: grow 4s ease-in-out infinite alternate"/>
+  </g></g>
+</svg>

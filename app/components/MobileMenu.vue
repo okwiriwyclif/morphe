@@ -4,6 +4,7 @@
     :class="open ? 'translate-x-0' : 'translate-x-full'"
     :aria-hidden="!open"
   >
+    <BrandLogo mark-only mark-class="h-16" class="mb-4" />
     <button class="absolute top-8 right-8" aria-label="Close menu" @click="$emit('close')">
       <X class="w-8 h-8" />
     </button>
