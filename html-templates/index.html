@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morphe Creatives | Shape the Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&family=Space+Grotesk:wght@300;500;700&display=swap");
+
+      :root {
+        --accent: #6366f1;
+        --bg: #050505;
+      }
+
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background-color: var(--bg);
+        color: #ffffff;
+        cursor: none; /* Custom cursor */
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      .font-heading {
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      /* Custom Cursor */
+      #cursor {
+        width: 20px;
+        height: 20px;
+        background: white;
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        mix-blend-mode: difference;
+        transition: transform 0.15s ease-out;
+      }
+
+      #cursor-follower {
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9998;
+        transition:
+          transform 0.3s ease-out,
+          top 0.1s,
+          left 0.1s;
+      }
+
+      .gradient-blur {
+        position: absolute;
+        filter: blur(120px);
+        opacity: 0.4;
+        z-index: -1;
+        border-radius: 50%;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: -4px;
+        left: 0;
+        background-color: white;
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      /* Marquee style animation */
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .marquee {
+        display: flex;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .marquee-content {
+        display: flex;
+        animation: scroll 20s linear infinite;
+      }
+
+      .glass {
+        background: rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .magnetic {
+        transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050505;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #222;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Custom Cursor Elements -->
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full z-50 px-6 py-8 flex justify-between items-center mix-blend-difference"
+    >
+      <a
+        href="#"
+        class="text-2xl font-bold tracking-tighter flex items-center gap-2 magnetic"
+      >
+        <span class="w-2 h-2 bg-white rounded-full"></span>
+        MORPHE
+      </a>
+      <div
+        class="hidden md:flex gap-12 text-xs font-medium tracking-widest uppercase"
+      >
+        <a href="#ethos" class="nav-link relative">Ethos</a>
+        <a href="#capabilities" class="nav-link relative">Capabilities</a>
+        <a href="#work" class="nav-link relative">Selected Work</a>
+        <a href="#contact" class="nav-link relative">Start a Project</a>
+      </div>
+      <button class="md:hidden" id="menu-toggle">
+        <i data-lucide="menu"></i>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-black z-[60] flex flex-col items-center justify-center gap-8 text-3xl font-bold translate-x-full transition-transform duration-500"
+    >
+      <button id="close-menu" class="absolute top-8 right-8">
+        <i data-lucide="x" class="w-8 h-8"></i>
+      </button>
+      <a href="#ethos" class="m-link">Ethos</a>
+      <a href="#capabilities" class="m-link">Capabilities</a>
+      <a href="#work" class="m-link">Work</a>
+      <a href="#contact" class="m-link">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      class="min-h-screen flex flex-col justify-center px-6 relative pt-20"
+    >
+      <div class="gradient-blur w-96 h-96 bg-indigo-600 top-20 -left-20"></div>
+      <div
+        class="gradient-blur w-[500px] h-[500px] bg-purple-900 bottom-0 -right-40"
+      ></div>
+
+      <div class="max-w-7xl mx-auto w-full">
+        <p
+          class="text-indigo-400 font-medium tracking-[0.3em] uppercase text-xs mb-8 reveal"
+        >
+          Design-Led Technology Studio
+        </p>
+        <h1
+          class="text-[12vw] md:text-[8vw] font-bold leading-[0.9] tracking-tighter reveal mb-12"
+        >
+          SHAPING <br />
+          <span class="italic font-light opacity-50">DIGITAL</span> <br />
+          FLUIDITY.
+        </h1>
+
+        <div
+          class="flex flex-col md:flex-row justify-between items-end gap-12 reveal"
+        >
+          <p class="max-w-md text-gray-400 text-lg leading-relaxed">
+            Morphe Creatives is a boutique agency at the intersection of
+            high-end design and software engineering. We build martech solutions
+            that feel human.
+          </p>
+          <div class="flex gap-4">
+            <a
+              href="#work"
+              class="w-16 h-16 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all group"
+            >
+              <i
+                data-lucide="arrow-down"
+                class="group-hover:scale-110 transition-transform"
+              ></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee Text -->
+    <div class="py-20 border-y border-white/5 bg-white/[0.02]">
+      <div class="marquee">
+        <div
+          class="marquee-content text-6xl md:text-8xl font-bold opacity-10 tracking-tighter uppercase space-x-20 px-10"
+        >
+          <span
+            >UI/UX DESIGN • MARTECH • DESIGN AS A SERVICE • BRANDING • CAMPAIGNS
+            • SOFTWARE • EVENT DESIGN •
+          </span>
+          <span
+            >UI/UX DESIGN • MARTECH • DESIGN AS A SERVICE • BRANDING • CAMPAIGNS
+            • SOFTWARE • EVENT DESIGN •
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Ethos Section -->
+    <section id="ethos" class="py-32 px-6">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 items-center">
+        <div class="relative reveal">
+          <div
+            class="aspect-[4/5] bg-zinc-900 rounded-3xl overflow-hidden glass p-1"
+          >
+            <div
+              class="w-full h-full bg-gradient-to-br from-zinc-800 to-zinc-950 rounded-[22px] flex items-center justify-center p-12"
+            >
+              <div class="space-y-4 w-full">
+                <div class="h-1 w-2/3 bg-white/20 rounded"></div>
+                <div class="h-1 w-full bg-white/40 rounded"></div>
+                <div class="h-1 w-1/2 bg-white/10 rounded"></div>
+                <div class="pt-8 grid grid-cols-2 gap-4">
+                  <div
+                    class="aspect-square bg-indigo-500/20 rounded-xl border border-indigo-500/30"
+                  ></div>
+                  <div
+                    class="aspect-square bg-white/5 rounded-xl border border-white/10"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute -bottom-10 -right-10 glass p-8 rounded-2xl max-w-xs hidden md:block"
+          >
+            <p class="text-sm italic text-gray-400">
+              "Technology is the skeleton, design is the soul."
+            </p>
+          </div>
+        </div>
+        <div class="reveal">
+          <h2 class="text-5xl font-bold mb-10 tracking-tight">
+            Software Led <br />By Design.
+          </h2>
+          <div class="space-y-8 text-gray-400 text-lg">
+            <p>
+              We believe most technology fails because it lacks empathy. At
+              Morphe, we reverse the engineering process. We start with the
+              human experience and build the software to support it.
+            </p>
+            <p>
+              Our Martech approach ensures your marketing tools aren't just
+              functional—they are beautiful, intuitive, and seamlessly
+              integrated into your brand's ecosystem.
+            </p>
+            <div class="pt-6 flex gap-12">
+              <div>
+                <span class="block text-white text-3xl font-bold">12+</span>
+                <span class="text-xs uppercase tracking-widest"
+                  >Industries</span
+                >
+              </div>
+              <div>
+                <span class="block text-white text-3xl font-bold">50+</span>
+                <span class="text-xs uppercase tracking-widest">Solutions</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capabilities (The "Morphe" Grid) -->
+    <section id="capabilities" class="py-32 px-6 bg-[#080808]">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-20 reveal">
+          <h2 class="text-4xl md:text-6xl font-bold mb-4 tracking-tighter">
+            OUR CAPABILITIES
+          </h2>
+          <p class="text-gray-500 tracking-widest uppercase text-xs">
+            Versatile skills for a volatile market
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-12 gap-1 px-1 bg-white/5 rounded-3xl overflow-hidden border border-white/5"
+        >
+          <!-- Cap 1: Design -->
+          <div
+            class="md:col-span-6 bg-[#050505] p-12 hover:bg-zinc-900 transition-colors group border-r border-b border-white/5"
+          >
+            <span class="text-indigo-500 text-xs font-bold mb-4 block">01</span>
+            <h3
+              class="text-3xl font-bold mb-6 group-hover:translate-x-2 transition-transform"
+            >
+              UI/UX & Branding
+            </h3>
+            <p class="text-gray-500 max-w-sm">
+              Creating digital languages that speak clearly. From visual
+              identity systems to complex product interfaces.
+            </p>
+          </div>
+          <!-- Cap 2: Dev -->
+          <div
+            class="md:col-span-6 bg-[#050505] p-12 hover:bg-zinc-900 transition-colors group border-b border-white/5"
+          >
+            <span class="text-purple-500 text-xs font-bold mb-4 block">02</span>
+            <h3
+              class="text-3xl font-bold mb-6 group-hover:translate-x-2 transition-transform"
+            >
+              Development
+            </h3>
+            <p class="text-gray-500 max-w-sm">
+              Modern tech stacks built for speed and scale. We build the engine
+              that drives your design-led vision.
+            </p>
+          </div>
+
+          <!-- Highlighted: Design as a Service -->
+          <div
+            class="md:col-span-12 bg-gradient-to-r from-indigo-900/20 to-purple-900/20 p-12 hover:from-indigo-900/30 hover:to-purple-900/30 transition-all group border-b border-white/5 relative overflow-hidden"
+          >
+            <div class="absolute top-12 right-12 hidden lg:block opacity-20">
+              <i
+                data-lucide="refresh-cw"
+                class="w-32 h-32 animate-spin-slow"
+              ></i>
+            </div>
+            <div class="relative z-10">
+              <span
+                class="bg-indigo-500 text-[10px] text-white font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-4 inline-block"
+                >Subscription Model</span
+              >
+              <h3 class="text-4xl md:text-5xl font-bold mb-6">
+                Design as a Service
+              </h3>
+              <div class="grid md:grid-cols-3 gap-8 items-start">
+                <p class="text-gray-300 text-lg leading-relaxed md:col-span-2">
+                  Scale your design output without the overhead of a full-time
+                  hire. One flat monthly fee. Unlimited design requests.
+                  Delivered with boutique precision and agency speed.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-400">
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="check" class="w-4 h-4 text-indigo-400"></i>
+                    No hiring headaches
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="check" class="w-4 h-4 text-indigo-400"></i>
+                    Unlimited revisions
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="check" class="w-4 h-4 text-indigo-400"></i>
+                    Pause or cancel anytime
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cap 3: Events -->
+          <div
+            class="md:col-span-6 bg-[#050505] p-12 hover:bg-zinc-900 transition-colors group border-r border-white/5"
+          >
+            <span class="text-pink-500 text-xs font-bold mb-4 block">03</span>
+            <h3
+              class="text-3xl font-bold mb-6 group-hover:translate-x-2 transition-transform"
+            >
+              Hybrid Events
+            </h3>
+            <p class="text-gray-500 max-w-sm">
+              Designing immersive physical and digital spaces where brand
+              stories come to life in real-time.
+            </p>
+          </div>
+          <!-- Cap 4: Martech -->
+          <div
+            class="md:col-span-6 bg-[#050505] p-12 hover:bg-zinc-900 transition-colors group"
+          >
+            <span class="text-orange-500 text-xs font-bold mb-4 block">04</span>
+            <h3
+              class="text-3xl font-bold mb-6 group-hover:translate-x-2 transition-transform"
+            >
+              Martech Strategy
+            </h3>
+            <p class="text-gray-500 max-w-sm">
+              Bespoke software automation and campaigns designed to convert data
+              into meaningful customer experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="py-32 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex justify-between items-end mb-20 reveal">
+          <h2 class="text-4xl md:text-6xl font-bold tracking-tighter">
+            SELECTED<br />WORK
+          </h2>
+          <div class="hidden md:block text-right">
+            <p class="text-gray-500 text-sm mb-2">Portfolio 2024</p>
+            <div class="w-24 h-[1px] bg-white/20 ml-auto"></div>
+          </div>
+        </div>
+
+        <div class="space-y-32">
+          <!-- Project 1 -->
+          <div class="group reveal">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+              <div
+                class="overflow-hidden rounded-3xl aspect-[16/10] bg-zinc-900 glass relative"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div class="w-full h-full flex items-center justify-center">
+                  <i data-lucide="monitor" class="w-20 h-20 text-white/5"></i>
+                </div>
+              </div>
+              <div>
+                <p
+                  class="text-indigo-400 text-xs font-bold uppercase tracking-[0.2em] mb-4"
+                >
+                  Software / UIUX
+                </p>
+                <h3 class="text-4xl font-bold mb-6">RIKA AI</h3>
+                <p class="text-gray-400 mb-8 text-lg">
+                  Rika AI is a cutting-edge platform that harnesses the power of
+                  AI to revolutionize the way we young people access government
+                  approved health resources.
+                </p>
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2 font-bold group"
+                >
+                  View Case
+                  <i
+                    data-lucide="arrow-right"
+                    class="group-hover:translate-x-2 transition-transform"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="group reveal">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+              <div
+                class="md:order-2 overflow-hidden rounded-3xl aspect-[16/10] bg-zinc-900 glass relative"
+              >
+                <div class="w-full h-full flex items-center justify-center">
+                  <i data-lucide="layers" class="w-20 h-20 text-white/5"></i>
+                </div>
+              </div>
+              <div class="md:order-1">
+                <p
+                  class="text-purple-400 text-xs font-bold uppercase tracking-[0.2em] mb-4"
+                >
+                  Event Design / Brand
+                </p>
+                <h3 class="text-4xl font-bold mb-6">IMNHC 2026</h3>
+                <p class="text-gray-400 mb-8 text-lg">
+                  Designing the complete visual identity and interactive kiosks
+                  for a 5,000-attendee hybrid summit.
+                </p>
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2 font-bold group"
+                >
+                  View Case
+                  <i
+                    data-lucide="arrow-right"
+                    class="group-hover:translate-x-2 transition-transform"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 px-6">
+      <div
+        class="max-w-7xl mx-auto glass rounded-[4rem] p-12 md:p-24 relative overflow-hidden"
+      >
+        <div
+          class="gradient-blur w-80 h-80 bg-indigo-600 -top-20 -right-20"
+        ></div>
+
+        <div class="grid md:grid-cols-2 gap-16 relative z-10">
+          <div class="reveal">
+            <h2
+              class="text-5xl md:text-7xl font-bold tracking-tighter mb-8 italic"
+            >
+              Let's <br />Morph.
+            </h2>
+            <p class="text-gray-400 text-xl mb-12">
+              Whether you need a full digital product or a continuous design
+              subscription, we're ready.
+            </p>
+            <div class="space-y-4">
+              <a
+                href="mailto:hello@morphe.co.ke"
+                class="block text-2xl font-bold hover:text-indigo-400 transition-colors"
+                >hello@morphe.co.ke</a
+              >
+              <p class="text-gray-500 uppercase tracking-widest text-xs">
+                Nairobi Kenya / Atlanta Gorgia / Remote
+              </p>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <form
+              onsubmit="
+                event.preventDefault();
+                showSuccess();
+              "
+              class="space-y-6"
+            >
+              <div class="group">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  class="w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-white transition-colors text-xl"
+                  required
+                />
+              </div>
+              <div class="group">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-white transition-colors text-xl"
+                  required
+                />
+              </div>
+              <div class="group">
+                <textarea
+                  placeholder="Tell us about your project or DaaS inquiry"
+                  rows="3"
+                  class="w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-white transition-colors text-xl resize-none"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                id="submit-btn"
+                class="w-20 h-20 rounded-full bg-white text-black font-bold flex items-center justify-center hover:scale-110 transition-transform magnetic"
+              >
+                <i data-lucide="send"></i>
+              </button>
+            </form>
+            <div id="success-state" class="hidden text-center py-20">
+              <h3 class="text-3xl font-bold text-indigo-400 mb-2">
+                Message Received
+              </h3>
+              <p class="text-gray-500">We'll get back to you shortly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 px-6 border-t border-white/5">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12"
+      >
+        <div class="text-center md:text-left">
+          <span class="text-3xl font-bold tracking-tighter">MORPHE.</span>
+          <p class="text-gray-500 text-sm mt-2">
+            © 2024 Morphe Creatives. All rights reserved.
+          </p>
+        </div>
+        <div
+          class="flex gap-12 text-xs uppercase tracking-widest text-gray-400"
+        >
+          <a href="#" class="hover:text-white transition-colors">Twitter</a>
+          <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+          <a href="#" class="hover:text-white transition-colors">Behance</a>
+          <a href="#" class="hover:text-white transition-colors">Instagram</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Initialize Icons
+      lucide.createIcons();
+
+      // Custom Cursor Logic
+      const cursor = document.getElementById("cursor");
+      const follower = document.getElementById("cursor-follower");
+
+      document.addEventListener("mousemove", (e) => {
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+
+        // Smoother delay for follower
+        setTimeout(() => {
+          follower.style.left = e.clientX - 10 + "px";
+          follower.style.top = e.clientY - 10 + "px";
+        }, 50);
+      });
+
+      // Hover states for cursor
+      const interactables = document.querySelectorAll(
+        "a, button, input, textarea, .group",
+      );
+      interactables.forEach((el) => {
+        el.addEventListener("mouseenter", () => {
+          cursor.style.transform = "scale(3)";
+          follower.style.transform = "scale(1.5)";
+          follower.style.borderColor = "rgba(255,255,255,0.8)";
+        });
+        el.addEventListener("mouseleave", () => {
+          cursor.style.transform = "scale(1)";
+          follower.style.transform = "scale(1)";
+          follower.style.borderColor = "rgba(255,255,255,0.3)";
+        });
+      });
+
+      // Magnetic Effect
+      const magnetics = document.querySelectorAll(".magnetic");
+      magnetics.forEach((el) => {
+        el.addEventListener("mousemove", (e) => {
+          const rect = el.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+          el.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+        });
+        el.addEventListener("mouseleave", () => {
+          el.style.transform = `translate(0px, 0px)`;
+        });
+      });
+
+      // Scroll Reveal
+      const reveals = document.querySelectorAll(".reveal");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+
+      reveals.forEach((el) => observer.observe(el));
+
+      // Mobile Menu
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const closeMenu = document.getElementById("close-menu");
+      const mLinks = document.querySelectorAll(".m-link");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.remove("translate-x-full");
+      });
+
+      const hideMenu = () => mobileMenu.classList.add("translate-x-full");
+      closeMenu.addEventListener("click", hideMenu);
+      mLinks.forEach((link) => link.addEventListener("click", hideMenu));
+
+      // Success State
+      function showSuccess() {
+        document.querySelector("form").classList.add("hidden");
+        document.getElementById("success-state").classList.remove("hidden");
+      }
+
+      // Disable custom cursor on touch
+      if ("ontouchstart" in window) {
+        cursor.style.display = "none";
+        follower.style.display = "none";
+        document.body.style.cursor = "auto";
+      }
+    </script>
+  </body>
+</html>
